@@ -1,34 +1,26 @@
-import { v4 as uuidv4 } from 'uuid';
-
-export const NavItem = [
+export const tab_items = [
   {
-    id: uuidv4(),
-    name: 'Игроки',
-    route: '/games',
+    title: 'Игроки',
+    value: 'players',
   },
   {
-    id: uuidv4(),
-    name: 'Команда',
-    route: '/team',
+    title: 'Команда',
+    value: 'team',
   },
   {
-    id: uuidv4(),
-    name: 'Мач',
-    route: '/match',
+    title: 'Мач',
+    value: 'match',
   },
   {
-    id: uuidv4(),
-    name: 'Турнир',
-    route: '/tournament',
+    title: 'Турнир',
+    value: 'tournament',
   },
   {
-    id: uuidv4(),
-    name: 'Площадки',
-    route: '/venues',
+    title: 'Площадки',
+    value: 'venues',
   },
   {
-    id: uuidv4(),
-    name: 'Лента',
-    route: '/reels',
+    title: 'Лента',
+    value: 'reels',
   },
 ];
