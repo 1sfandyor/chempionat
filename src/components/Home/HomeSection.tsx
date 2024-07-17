@@ -5,6 +5,7 @@ import React from 'react'
 import { TableTabFilter } from '../tab-filter'
 import { tab_items } from '@/config/constants/Navbar'
 import Reels from '../tabs/reels'
+import Players from '../tabs/players'
 
 export const HomeSection = () => {
   const {value, onValueChange} = useTab()
@@ -15,9 +16,9 @@ export const HomeSection = () => {
 
       {/* Contnet Wrapper */}
       <section className='px-[80px] w-[540px]'>
-        {value === 'all' && <p>all</p>}
+        {value === 'all' && <Players />}
 
-        {value === 'players' && <p>players</p>}
+        {value === 'players' && <Players />}
 
         {value === 'team' && <p>team</p>}
 
