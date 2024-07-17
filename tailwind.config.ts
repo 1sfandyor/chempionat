@@ -21,6 +21,8 @@ const config: Config = {
         black: '#242424',
         gray: "#F0F0F0",
         lightGray: "#AAAAAA",
+        primaryBg: '#3a3a3a',
+        primaryBorder: '#F5F4F2',
       },
 
       fontFamily: {
