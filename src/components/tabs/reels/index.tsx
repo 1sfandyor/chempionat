@@ -1,19 +1,17 @@
 import React from 'react'
 import ReelsCard from './reels-card'
 import { TPost } from '@/interfaces/post.interface'
-import avatar from '../../../../public/avatar/avatar.png'
-import post from '../../../../public/avatar/post.png'
 import {v4 as uuidv4} from 'uuid'
 const Reels = () => {
   const posts: TPost[] = [
     {
       id: uuidv4(),
-      profile_photo: avatar,
+      profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: post,
+      post: "/avatar/post.png",
       stats: {
         coment: 678,
         like: 1209,
@@ -21,12 +19,12 @@ const Reels = () => {
     },
     {
       id: uuidv4(),
-      profile_photo: avatar,
+      profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: post,
+      post: "/avatar/post.png",
       stats: {
         coment: 678,
         like: 1209,
@@ -34,12 +32,12 @@ const Reels = () => {
     },
     {
       id: uuidv4(),
-      profile_photo: avatar,
+      profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: post,
+      post: "/avatar/post.png",
       stats: {
         coment: 678,
         like: 1209,
@@ -47,12 +45,12 @@ const Reels = () => {
     },
     {
       id: uuidv4(),
-      profile_photo: avatar,
+      profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: post,
+      post: "/avatar/post.png",
       stats: {
         coment: 678,
         like: 1209,
@@ -60,12 +58,12 @@ const Reels = () => {
     },
     {
       id: uuidv4(),
-      profile_photo: avatar,
+      profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: post,
+      post: "/avatar/post.png",
       stats: {
         coment: 678,
         like: 1209,
