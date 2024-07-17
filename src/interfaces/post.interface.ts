@@ -3,6 +3,7 @@ import { StaticImageData } from 'next/image';
 
 // Adjust the TPost type definition
 export type TPost = {
+  id?: number;
   profile_photo: StaticImageData;
   user_name: string;
   recently: string;
