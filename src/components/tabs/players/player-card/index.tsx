@@ -8,7 +8,7 @@ import ball from '../../../../../public/emojis/ball.svg'
 
 const PlayerCard = () => {
   return (
-    <div className='w-full flex gap-[12px] items-center'>
+    <div className='w-full flex gap-[12px] items-center cursor-pointer'>
       
       {/* Profile photo wrapper */}
       <div className='relative'>
@@ -73,7 +73,7 @@ const PlayerCard = () => {
         </div>
 
         {/* Lighting */}
-        <div className='flex items-center mt-[10px]'>
+        <div className='flex items-center'>
           <div className='w-[19px]'>
             <Image width={19} className='w-full' src={lightning} alt='lightning' />
           </div>
@@ -81,7 +81,7 @@ const PlayerCard = () => {
         </div>
 
         {/* suggest */}
-        <p className='text-black font-[500] mt-[7px] leading-normal text-[0.96rem]'>suggest</p>
+        <p className='text-black font-[500] leading-normal text-[0.96rem]'>suggest</p>
       </div>
     </div>
   )

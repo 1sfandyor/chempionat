@@ -6,6 +6,7 @@ import { TableTabFilter } from '../tab-filter'
 import { tab_items } from '@/config/constants/Navbar'
 import Reels from '../tabs/reels'
 import Players from '../tabs/players'
+import Teams from '../tabs/teams'
 
 export const HomeSection = () => {
   const {value, onValueChange} = useTab()
@@ -20,7 +21,7 @@ export const HomeSection = () => {
 
         {value === 'players' && <Players />}
 
-        {value === 'team' && <p>team</p>}
+        {value === 'team' && <Teams />}
 
         {value === 'match' && <p>match</p>}
 
