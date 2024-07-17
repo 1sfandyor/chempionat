@@ -3,11 +3,11 @@ import ReelsCard from './reels-card'
 import { TPost } from '@/interfaces/post.interface'
 import avatar from '@/assets/avatar/avatar.png'
 import post from '@/assets/avatar/post.png'
-
+import {v4 as uuidv4} from 'uuid'
 const Reels = () => {
   const posts: TPost[] = [
     {
-      id: 1,
+      id: uuidv4(),
       profile_photo: avatar,
       user_name: 'Darkzone.esport',
       recently: '1 дн',
@@ -20,7 +20,7 @@ const Reels = () => {
       }
     },
     {
-      id: 2,
+      id: uuidv4(),
       profile_photo: avatar,
       user_name: 'Darkzone.esport',
       recently: '1 дн',
@@ -33,7 +33,7 @@ const Reels = () => {
       }
     },
     {
-      id: 3,
+      id: uuidv4(),
       profile_photo: avatar,
       user_name: 'Darkzone.esport',
       recently: '1 дн',
@@ -46,7 +46,7 @@ const Reels = () => {
       }
     },
     {
-      id: 4,
+      id: uuidv4(),
       profile_photo: avatar,
       user_name: 'Darkzone.esport',
       recently: '1 дн',
@@ -59,7 +59,7 @@ const Reels = () => {
       }
     },
     {
-      id: 5,
+      id: uuidv4(),
       profile_photo: avatar,
       user_name: 'Darkzone.esport',
       recently: '1 дн',
