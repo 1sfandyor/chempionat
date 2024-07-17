@@ -1,9 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import coment from '../../../../../public/icons/coment.svg'
-import like from '../../../../../public/icons/like.svg'
-import edit from '../../../../../public/icons/edit.svg'
-import mute from '../../../../../public/icons/mute.svg'
 import { TPost } from '@/interfaces/post.interface'
 
 const ReelsCard = ({profile_photo, user_name, recently, posted_date, description, post, stats}: TPost) => {
@@ -17,7 +13,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
 
           {/* Avatar */}
           <div className='w-[40px] h-[40px]'>
-            <Image className='w-full h-full object-cover object-center' src={profile_photo} alt='' />
+            <Image width={40} height={40} className='w-full h-full object-cover object-center' src={profile_photo} alt='' />
           </div>
           
           <div>
@@ -46,7 +42,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
 
         {/* Post */}
         <div className='w-full h-full bg-black'>
-          <Image className='w-full h-full object-contain' src={post} alt='post' />
+          <Image width={0} sizes='auto' height={456} className='w-full h-full object-contain' src={post} alt='post' />
         </div>
 
         {/* Functions */}
@@ -57,7 +53,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
 
             <div className='flex justify-center items-center w-[32px] h-[32px] bg-primaryBg p-[8px] rounded-[50%] mb-[2px]'>
               <div>
-                <Image src={coment} alt='coment' />
+                <Image width={40} height={40} src="/icons/coment.svg" alt='coment' />
               </div>
             </div>
 
@@ -68,7 +64,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
           <div>
             <div className='flex justify-center items-center w-[32px] h-[32px] bg-primaryBg p-[8px] rounded-[50%] mb-[2px]'>
               <div>
-                <Image src={like} alt='like' />
+                <Image width={40} height={40} src="/icons/like.svg" alt='like' />
               </div>
             </div>
 
@@ -79,7 +75,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
           <div className='mb-[18px]'>
             <div className='flex justify-center items-center w-[32px] h-[32px] bg-primaryBg p-[8px] rounded-[50%]'>
               <div>
-                <Image src={edit} alt='edit' />
+                <Image width={40} height={40} src="/icons/edit.svg" alt='edit' />
               </div>
             </div>
           </div>
@@ -88,7 +84,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
           <div>
             <div className='flex justify-center items-center w-[32px] h-[32px] bg-primaryBg p-[8px] rounded-[50%]'>
               <div>
-                <Image src={mute} alt='mute' />
+                <Image width={40} height={40} src="/icons/mute.svg" alt='mute' />
               </div>
             </div>
           </div>

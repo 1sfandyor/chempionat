@@ -1,10 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import avatar from '../../../../../public/avatar/avatar.png'
-import lightning from '../../../../../public/icons/lightning.svg'
-import valleyBall from '../../../../../public/emojis/valleyball.svg'
-import tennis from '../../../../../public/emojis/tennis.svg'
-import ball from '../../../../../public/emojis/ball.svg'
 
 const PlayerCard = () => {
   return (
@@ -14,7 +9,7 @@ const PlayerCard = () => {
       <div className='relative'>
         <span className='absolute top-[2px] left-[2px] w-[5px] h-[5px] bg-green rounded-[50%]'></span>
         <div className='w-[60px] h-[60px]'>
-          <Image width={60} height={60} className='w-full h-full rounded-[50%]' src={avatar} alt='avatar' />
+          <Image width={60} height={60} className='w-full h-full rounded-[50%]' src="/avatar/avatar.png" alt='avatar' />
         </div>
       </div>
 
@@ -35,7 +30,7 @@ const PlayerCard = () => {
               
               {/* valleyBall Icon */}
               <div className='w-[19px]'>
-                <Image className='w-full' src={valleyBall} alt='tenns' />
+                <Image className='w-full' width={19} height={19} src="/emojis/ball.svg" alt='football' />
               </div>
 
               {/* Counts */}
@@ -47,7 +42,7 @@ const PlayerCard = () => {
               
               {/* Football Icon */}
               <div className='w-[19px]'>
-                <Image className='w-full' src={ball} alt='volleyball' />
+                <Image className='w-full' width={19} height={19} src="/emojis/valleyball.svg" alt='volleyball' />
               </div>
 
               {/* Counts */}
@@ -59,7 +54,7 @@ const PlayerCard = () => {
               
               {/* Table Tennis Icon */}
               <div className='w-[19px]'>
-                <Image className='w-full' src={tennis} alt='table tennis' />
+                <Image className='w-full' width={19} height={19} src="/emojis/tennis.svg" alt='table tennis' />
               </div>
 
               {/* Counts */}
@@ -75,7 +70,7 @@ const PlayerCard = () => {
         {/* Lighting */}
         <div className='flex items-center'>
           <div className='w-[19px]'>
-            <Image width={19} className='w-full' src={lightning} alt='lightning' />
+            <Image width={19} height={19} className='w-full' src="/icons/lightning.svg" alt='lightning' />
           </div>
           <p className='text-black text-[0.96rem] leading-[normal]'>54</p>
         </div>
