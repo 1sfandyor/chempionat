@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { SFPro } from "@/utils/customFont";
 import "../globals.css";
-import { Navbar } from "@/components/Navbar/Navbar";
-import { Footer } from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Chempion Social App",

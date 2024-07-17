@@ -23,6 +23,7 @@ const config: Config = {
         lightGray: "#AAAAAA",
         primaryBg: '#3a3a3a',
         primaryBorder: '#F5F4F2',
+        green: '#4FDA38',
       },
 
       fontFamily: {
