@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-import coment from '@/assets/icons/coment.svg'
-import like from '@/assets/icons/like.svg'
-import edit from '@/assets/icons/edit.svg'
-import mute from '@/assets/icons/mute.svg'
+import coment from '../../../../../public/icons/coment.svg'
+import like from '../../../../../public/icons/like.svg'
+import edit from '../../../../../public/icons/edit.svg'
+import mute from '../../../../../public/icons/mute.svg'
 import { TPost } from '@/interfaces/post.interface'
 
 const ReelsCard = ({profile_photo, user_name, recently, posted_date, description, post, stats}: TPost) => {

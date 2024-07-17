@@ -1,8 +1,8 @@
 import React from 'react'
 import ReelsCard from './reels-card'
 import { TPost } from '@/interfaces/post.interface'
-import avatar from '@/assets/avatar/avatar.png'
-import post from '@/assets/avatar/post.png'
+import avatar from '../../../../public/avatar/avatar.png'
+import post from '../../../../public/avatar/post.png'
 import {v4 as uuidv4} from 'uuid'
 const Reels = () => {
   const posts: TPost[] = [
