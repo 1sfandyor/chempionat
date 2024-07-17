@@ -1,16 +1,34 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export const NavItem = [
   {
-    route: '/',
-    label: 'Home'
+    id: uuidv4(),
+    name: 'Игроки',
+    route: '/games',
   },
-  
   {
-    route: '/category',
-    label: 'Category'
+    id: uuidv4(),
+    name: 'Команда',
+    route: '/team',
   },
-
   {
-    route: '/blogs',
-    label: 'Blogs'
-  }
-] 
+    id: uuidv4(),
+    name: 'Мач',
+    route: '/match',
+  },
+  {
+    id: uuidv4(),
+    name: 'Турнир',
+    route: '/tournament',
+  },
+  {
+    id: uuidv4(),
+    name: 'Площадки',
+    route: '/venues',
+  },
+  {
+    id: uuidv4(),
+    name: 'Лента',
+    route: '/reels',
+  },
+];
