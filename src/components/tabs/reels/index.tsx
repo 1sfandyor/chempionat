@@ -72,7 +72,7 @@ const Reels = () => {
     <section className='flex pb-[100px] flex-col gap-[30px] overflow-auto h-[100vh]'>
       {
         posts.map((item, index) => (
-          <ReelsCard profile_photo={item.profile_photo} user_name={item.user_name} recently={item.recently} posted_date={item.posted_date} description={item.description} post={item.post} stats={item.stats}  />
+          <ReelsCard key={index} profile_photo={item.profile_photo} user_name={item.user_name} recently={item.recently} posted_date={item.posted_date} description={item.description} post={item.post} stats={item.stats}  />
         ))
       }
     </section>
