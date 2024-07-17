@@ -14,7 +14,13 @@ const config: Config = {
         md: '768px',
         lg: '984px',
         xl: '1900px',
-        '2xl': '1496px',
+        '2xl': '1300px',
+      },
+
+      colors: {
+        black: '#242424',
+        gray: "#F0F0F0",
+        lightGray: "#AAAAAA",
       },
 
       fontFamily: {
@@ -27,7 +33,7 @@ const config: Config = {
       padding: {
         DEFAULT: '1rem',
         xl: '1.5rem',
-        '2xl': '2rem',
+        '2xl': '3.12rem',
       },
 
       screens: {
@@ -35,7 +41,7 @@ const config: Config = {
         md: '768px',
         lg: '984px',
         xl: '1900px',
-        '2xl': '1496px',
+        '2xl': '1px',
       },
     }
   },
