@@ -9,7 +9,7 @@ export const Button: FC<{button: ButtonsType}> = ({button}) => {
 
 
     const renderButton = () => (
-        <button className={classes} onClick={button.onClick} type='button'>
+        <button className={classes} onClick={button.onClick} type={button.type}>
             <span className={`${spanClass} ${button.spanClasses}`}>{button.text}</span>
         </button>
     )

@@ -20,7 +20,10 @@ const config: Config = {
       colors: {
         black: '#242424',
         gray: "#F0F0F0",
-        lightGray: "#AAAAAA",
+        lightGray: "#AAA",
+        borderGray: '#E9E9E9',
+        red: '#EA4335',
+        purple: '#6900FF'
       },
 
       fontFamily: {

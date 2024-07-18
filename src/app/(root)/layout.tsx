@@ -20,6 +20,8 @@ export default function RootLayout({
       <body className={SFPro.variable}>
         {children}
       </body>
+
+
     </html>
   );
 }
