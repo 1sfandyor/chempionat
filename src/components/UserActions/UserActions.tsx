@@ -1,8 +1,8 @@
-import avatar from '@/../public/avatar.png';
+import avatar from '/public/avatar.png';
 import Image from 'next/image';
-import msg from '@/../public/chat.svg'
-import thunder from '@/../public/thunder.svg'
-import breath from '@/../public/breath.svg';
+import msg from '/public/chat.svg'
+import thunder from '/public/thunder.svg'
+import breath from '/public/breath.svg';
 import { CategorySport } from '../CategorySport/CategorySport';
 
 export const UserActions = () => {

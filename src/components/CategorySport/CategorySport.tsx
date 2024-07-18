@@ -1,7 +1,7 @@
 import Image from "next/image"
-import bassketboll from '@/../public/bassketball.png' ;
-import tennis from '@/../public/tesnnis.png';
-import cs from '@/../public/cs.png'; 
+import bassketboll from '/public/bassketball.png' ;
+import tennis from '/public/tesnnis.png';
+import cs from '/public/cs.png'; 
 
 export const CategorySport = () => {
   return (
