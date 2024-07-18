@@ -83,22 +83,23 @@ export const Actions = () => {
       </div>
 
       {
-        openRegisterModal && (
-          <>
-            <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenRegisterModal(false)}></div>
-            <RegisterModal modal="register" modalItem={modalItem} />
-          </>
-        )
-      }
+  openRegisterModal && (
+    <>
+      <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenRegisterModal(false)}></div>
+      <RegisterModal modal="register" modalItem={modalItem} />
+    </> 
+  )
+}
 
-      {
-        openLoginModal && (
-          <>
-            <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenLoginModal(false)}></div>
-            <RegisterModal modal="login" modalItem={modalItem} />
-          </>
-        )
-      }
+{
+  openLoginModal && (
+    <>
+      <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenLoginModal(false)}></div>
+      <RegisterModal modal="login" modalItem={modalItem} />
+    </> 
+  )
+}
+
     </>
   );
 };
