@@ -30,6 +30,11 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .hover--state:hover > .wrapper > button{
   display: flex;
+=======
+::-webkit-scrollbar {
+  width: 0;
+>>>>>>> efc2795ff02d3468fa672fe2e894806c25d18505
 }
