@@ -33,3 +33,8 @@ body {
 .hover--state:hover > .wrapper > button{
   display: flex;
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+  background: transparent; /* make scrollbar transparent */
+}

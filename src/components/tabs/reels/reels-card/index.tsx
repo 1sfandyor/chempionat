@@ -7,22 +7,20 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
     <div className='w-full pb-[30px] border-b-[1px] border-solid border-primaryBorder'>
       
       <div className='flex justify-between items-start mb-[14px]'>
-         
+
         {/* User profile data */}
-        <div className='flex items-center gap-[10px]'>
+        <div className='flex items-center gap-[5px]'>
 
           {/* Avatar */}
           <div className='w-[40px] h-[40px]'>
             <Image width={40} height={40} className='w-full h-full object-cover object-center' src={profile_photo} alt='' />
           </div>
-          
-          <div>
 
+          <div className='flex flex-col'>
             {/* User name */}
-            <h3 className='text-black font-[600] leading-[normal] text-[0.938rem] mb-[2px]'>{user_name}</h3>
-          
+            <h3 className='text-black font-[600] leading-normal text-[0.938rem]'>{user_name}</h3>
             {/* Date */}
-            <span className='text-black text-[0.813rem] font-[400] leading-[normal]'>{recently}</span>
+            <span className='text-black text-[0.813rem] font-normal leading-normal'>{recently}</span>
           </div>  
         </div>
 
