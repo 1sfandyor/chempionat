@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { useForm } from "react-hook-form";
-import google from '/public/google.png';
+import google from '@/public/google.png';
 
 interface FormValues {
   email: string;

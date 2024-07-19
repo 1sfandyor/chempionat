@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import logo from '/public/logo.svg';
+import logo from '@/public/logo.svg';
 import { Button } from "@/components/Button/Button";
 import { SFPro } from "@/utils/customFont";
 import { UserActions } from "../UserActions/UserActions";

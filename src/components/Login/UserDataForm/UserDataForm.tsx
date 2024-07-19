@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import upload from '/public/upload.png';
+import upload from '@/public/upload.png';
 import Image from 'next/image';
 
 interface UserData {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import search from '/public/icons/search.svg'
+import search from '@/public/icons/search.svg'
 
 
 export type TTab = {

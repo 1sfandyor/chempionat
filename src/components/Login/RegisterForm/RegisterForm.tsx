@@ -1,10 +1,10 @@
 import { FC, useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import UserDataForm from "../UserDataForm/UserDataForm";
-import { Button } from "../../Button/Button";
+import { Button } from "@/components/Button/Button";
 import Link from "next/link";
 import Image from "next/image";
-import google from '/public/google.png';
+import google from '@/public/google.png';
 
 interface FormValues {
   email: string;
