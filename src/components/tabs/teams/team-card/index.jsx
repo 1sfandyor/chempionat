@@ -18,35 +18,30 @@ const TeamCard = () => {
         <div className='flex flex-col gap-[5px]'>
 
             {/* User name */}
-            <p className='text-black text-[0.0.938rem] font-[600] leading-normal'>
+            <p className='text-black text-[15px] mr-[3.5px] font-[600] leading-normal'>
                 @football_team
             </p>
 
             {/* Players Count */}
             <div className='flex items-center'>
-                <div className='mr-[4px] w-[20px]'>
-                  <Image className='w-full' src="/icons/players.svg" alt='players icon' width={20} height={20} />
-                </div>
-                <p className='text-black text-[0.813rem] fnot-[500] leading-[normal] mr-[7px]'>7</p>
-                <div>
-                    <Image width={19} height={19} src={"/emojis/ball.svg"} alt='ball icon' />
-                </div>
+                <Image className='mr-[5px] w-5 h-5' src="/icons/players.svg" alt='players icon' width={20} height={20} />
+                <p className='text-black text-[0.813rem] fnot-[500] leading-[normal] mr-[5px] mb-[3px]'>7</p>
+                <Image width={19} height={19} src={"/emojis/ball.svg"} alt='ball icon' />
             </div>
 
             {/* From && Date */}
-            <p className='text-black/40 text-[0.688rem] font-[400] leading-[normal]'>Тошкент</p>
+            <p className='text-black/40 text-[11px] font-[400] leading-[normal]'>Тошкент</p>
         </div>
 
         {/* Lighting */}
-        <div className='flex items-center '>
-          <div className='w-[19px]'>
-            <Image height={19} width={19} className='w-full' src={"/icons/lightning.svg"} alt='lightning' />
-          </div>
-          <p className='text-black text-[0.96rem] leading-[normal]'>54</p>
+        <div className='flex items-center'>
+            <div className='flex items-center mr-[12px]'>
+              <Image height={19} width={19} className='w-full' src={"/icons/lightning.svg"} alt='lightning' />
+              <p className='text-black text-[0.96rem] leading-[normal]'>54</p>
+            </div>
+            <p className='text-black font-[500] leading-normal text-[0.96rem]'>предлагать</p>
         </div>
 
-        {/* suggest */}
-        <p className='text-black font-[500]  leading-normal text-[0.96rem]'>предлагать</p>
       </div>
     </div>
   )

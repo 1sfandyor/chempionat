@@ -3,10 +3,10 @@ import React from 'react'
 
 const PlayerCard = () => {
   return (
-    <div className='w-full flex gap-[12px] items-center cursor-pointer'>
+    <div className='w-full flex gap-[12px] items-center'>
       
       {/* Profile photo wrapper */}
-      <div className='relative'>
+      <div className='relative cursor-pointer'>
         <span className='absolute top-[2px] left-[2px] w-[5px] h-[5px] bg-green rounded-[50%]'></span>
         <div className='w-[60px] h-[60px]'>
           <Image width={60} height={60} className='w-full h-full rounded-[50%]' src="/avatar/avatar.png" alt='avatar' />
@@ -14,11 +14,11 @@ const PlayerCard = () => {
       </div>
 
       {/* Profile Data */}
-      <div className='flex gap-[12px] items-start'>
+      <div className='flex gap-[12px] items-start cursor-pointer'>
         <div className='flex flex-col gap-[5px]'>
 
           {/* User name */}
-          <p className='text-black text-[0.0.938rem] font-[600] leading-normal'>
+          <p className='text-black text-[15px] font-[600] leading-normal'>
             @cyber_crush
           </p>
 
@@ -69,15 +69,17 @@ const PlayerCard = () => {
 
         {/* Lighting */}
         <div className='flex items-center'>
-          <div className='w-[19px]'>
-            <Image width={19} height={19} className='w-full' src="/icons/lightning.svg" alt='lightning' />
+
+          <div className='flex items-center mr-[12px]'>
+            <Image width={19} height={19} className='w-[19px]' src="/icons/lightning.svg" alt='lightning' />
+            <p className='text-black text-[15px] leading-[normal]'>54</p>
           </div>
-          <p className='text-black text-[0.96rem] leading-[normal]'>54</p>
         </div>
 
-        {/* suggest */}
-        <p className='text-black font-[500] leading-normal text-[0.96rem]'>suggest</p>
       </div>
+
+      {/* suggest */}
+      <p className='text-black font-[500] leading-[16px] text-[15px] self-start cursor-pointer'>suggest</p>
     </div>
   )
 }

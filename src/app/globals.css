@@ -38,3 +38,7 @@ body {
   width: 2px;
   background: transparent;
 }
+
+a.active{
+  color: #242424;
+}
