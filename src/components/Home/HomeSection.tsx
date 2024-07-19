@@ -17,7 +17,7 @@ export const HomeSection = () => {
   
   return (
     <section className='w-1/2 overflow-y-hidden'>
-      <div className='pt-[19px] w-540px] border-x-[1px] border-x-border'>
+      <div className='pt-[19px] w-[540px] border-x-[1px] border-x-border'>
         <TableTabFilter tabs={tab_items} value={value} onTabChange={onValueChange} />
 
         {/* Content Wrapper */}
