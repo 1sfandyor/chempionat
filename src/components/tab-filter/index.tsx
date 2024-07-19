@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 // import Search from '@/public/icons/search.svg'
 
 
@@ -25,7 +26,9 @@ export function TableTabFilter({
             <ul className="flex items-center gap-[15px] text-[0.938rem] ">
                 {tabs.map(({ title, value }, index) => (
                     <li className={`cursor-pointer font-medium leading-[17.9px] ${value !== value ? "text-black" : "text-black/40"}`} onClick={() => onTabChange(value)} key={index}>
-                        {title}
+                        <Link href={`?tab=${title}`}>
+                            {title}
+                        </Link>
                     </li>
                 ))}
             </ul>
