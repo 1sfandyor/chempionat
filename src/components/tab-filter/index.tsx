@@ -1,5 +1,5 @@
 import Image from "next/image";
-import search from '@/public/icons/search.svg'
+// import Search from '@/public/icons/search.svg'
 
 
 export type TTab = {
@@ -20,7 +20,7 @@ export function TableTabFilter({
     return (
         <div className="flex pl-[35px] gap-[25px] w-fulll items-center pr-[88px] mb-[28px]">
             <div className="w-[20px] h-[20px]">
-                <Image className="w-full h-full" src={search} alt="search icon" />
+                <Image src='icons/search.svg' width={20} height={20} className="w-full h-full" alt="search icon" />
             </div>
             <ul className="flex items-center gap-[15px] text-[0.938rem] ">
                 {tabs.map(({ title, value }, index) => (

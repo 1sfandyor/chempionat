@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { useForm } from "react-hook-form";
-import google from '@/public/google.png';
+// import google from '@/public/google.png';
 
 interface FormValues {
   email: string;
@@ -90,7 +90,7 @@ export const LoginForm: FC<RegisterFormProps> = ({ setOpenRegisterModal }) => {
         />
       </form>
       <Link href={'/'}>
-        <Image src={google} alt="Google Icon" width={70.947} height={24} />
+        <Image src='/google.png' alt="Google Icon" width={70.947} height={24} />
       </Link>
     </div>
   );

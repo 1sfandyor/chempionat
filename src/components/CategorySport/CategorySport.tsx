@@ -1,7 +1,7 @@
 import Image from "next/image"
-import bassketball from '@/public/bassketball.png';
-import tennis from '@/public/tennis.png';
-import cs from '@/public/cs.png';
+// import bassketball from '@/public/bassketball.png';
+// import tennis from '@/public/tennis.png';
+// import cs from '@/public/cs.png';
 
 export const CategorySport = () => {
   return (
@@ -15,7 +15,7 @@ export const CategorySport = () => {
 
         <div className="flex items-center mb-2.5 hover--state">
           <div className="rounded-full p-2 bg-gray mr-[11px]">
-            <Image src={bassketball} alt="" width={24} height={24}/>
+            <Image src="/bassketball.png" alt="" width={24} height={24}/>
           </div>
           <div className="flex items-start wrapper">
             <div className="text-black mr-[55px]">
@@ -28,7 +28,7 @@ export const CategorySport = () => {
 
         <div className="flex items-center mb-2.5 hover--state">
           <div className="rounded-full p-2 bg-gray mr-[11px]">
-            <Image src={tennis} alt="" width={24} height={24}/>
+            <Image src="/tennis.png" alt="" width={24} height={24}/>
           </div>
           <div className="flex items-start wrapper">
             <div className="text-black mr-[55px]">
@@ -42,7 +42,7 @@ export const CategorySport = () => {
 
         <div className="flex items-center mb-2.5 hover--state">
           <div className="rounded-full p-2 bg-gray mr-[11px]">
-            <Image className="rounded-full" src={cs} alt="" width={24} height={24}/>
+            <Image className="rounded-full" src="/cs.png" alt="" width={24} height={24}/>
           </div>
 
           <div className="flex items-start wrapper">

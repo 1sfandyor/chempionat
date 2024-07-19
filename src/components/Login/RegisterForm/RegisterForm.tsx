@@ -4,7 +4,7 @@ import UserDataForm from "../UserDataForm/UserDataForm";
 import { Button } from "@/components/Button/Button";
 import Link from "next/link";
 import Image from "next/image";
-import google from '@/public/google.png';
+// import google from '@/public/google.png';
 
 interface FormValues {
   email: string;
@@ -142,7 +142,7 @@ export const RegisterForm: FC<RegisterFormProps> = ({ setOpenRegisterModal }) =>
         />
       </form>
       <Link href={'/'}>
-        <Image src={google} alt="Google Icon" width={70.947} height={24} />
+        <Image src='/google.png' alt="Google Icon" width={70.947} height={24} />
       </Link>
     </div>
   );

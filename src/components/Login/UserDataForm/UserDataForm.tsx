@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import upload from '@/public/upload.png';
+// import upload from '@/public/upload.png';
 import Image from 'next/image';
 
 interface UserData {
@@ -20,7 +20,7 @@ const UserDataForm: FC<UserDataFormProps> = ({ userData, handleChange }) => {
       <div className="flex items-center justify-center w-[66px] h-[66px] mr-0.5">
         <label htmlFor="dropzone-file" className="flex p-2.5 w-full h-full rounded-lg cursor-pointer bg-gray hover:bg-gray-100 dark:hover:border-gray-500">
           <div className="flex flex-col items-center justify-center">
-            <Image src={upload} alt='upload image' width={45} height={45} />
+            <Image src='/upload.png' alt='upload image' width={45} height={45} />
           </div>
           <input id="dropzone-file" type="file" className="hidden" />
         </label>

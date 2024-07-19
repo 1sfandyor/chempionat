@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import logo from '@/public/logo.svg';
+// import logo from '@/public/logo.svg';
 import { Button } from "@/components/Button/Button";
 import { SFPro } from "@/utils/customFont";
 import { UserActions } from "../UserActions/UserActions";
@@ -40,7 +40,7 @@ export const Actions = () => {
   return (
     <>
       <div className="w-1/2 flex items-start justify-center container mx-auto pt-[19px]">
-        <Image className="2xl:mr-[82.91px]" src={logo} alt="Logo" width={36} height={36} />
+        <Image src='logo.svg' className="2xl:mr-[82.91px]" alt="Logo" width={36} height={36} />
         {
           nickname
             ? <UserActions />
