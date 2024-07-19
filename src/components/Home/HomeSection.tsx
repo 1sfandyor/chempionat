@@ -8,6 +8,7 @@ import { tab_items } from '@/config/constants/Navbar';
 import Reels from '../tabs/reels';
 import Players from '../tabs/players';
 import Teams from '../tabs/teams';
+import { Suspense } from 'react'
 
 export const HomeSection = () => {
   const { value, onValueChange } = useTab();
@@ -33,3 +34,11 @@ export const HomeSection = () => {
     </section>
   );
 };
+
+export function HomeSectionWrapper() {
+  return (
+    <Suspense>
+      <HomeSection />
+    </Suspense>
+  )
+}
