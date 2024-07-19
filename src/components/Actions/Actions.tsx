@@ -14,18 +14,20 @@ export const Actions = () => {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [email, setEmail] = useState<string | null>(null);
   const [pin, setPin] = useState<string | null>(null);
+  const [storedNickname, setStoredNickname] = useState<string | null>()
 
-  const storedNickname = window?.localStorage?.getItem('nickname');
-
+  useEffect(() => {
+    setNickname(localStorage?.getItem('nickname'));
+  }, [])
 
   useEffect(() => {
     const storedEmail = window.localStorage.getItem('email');
     const storedPin = window.localStorage.getItem('pincode');
 
-    setNickname(storedNickname);
+    setNickname(localStorage?.getItem('nickname'));
     setEmail(storedEmail);
     setPin(storedPin);
-  }, [storedNickname]);
+  }, [openRegisterModal, storedNickname]);
 
   const modalItem: RegisterModalType = {
     text: email === null

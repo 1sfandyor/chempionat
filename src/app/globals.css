@@ -36,5 +36,5 @@ body {
 
 ::-webkit-scrollbar {
   width: 2px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
 }

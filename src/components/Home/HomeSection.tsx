@@ -12,12 +12,13 @@ export const HomeSection = () => {
   const {value, onValueChange} = useTab()
 
   return (
-    <section className='w-1/2 pt-[19px] container border-s-[1px] border-s-slate-500 overflow-y-hidden'>
+    <section className='w-1/2 overflow-y-hidden'>
+      <div className='pt-[19px] border-x-[1px] border-x-border'>
       <TableTabFilter tabs={tab_items} value={value} onTabChange={onValueChange} />
 
       {/* Contnet Wrapper */}
       <section className='px-[80px] w-[540px]'>
-        {value === 'all' && <Players />}
+        {value === 'all' && <Reels />}
 
         {value === 'players' && <Players />}
 
@@ -31,6 +32,7 @@ export const HomeSection = () => {
 
         {value === 'reels' && <Reels />}
       </section>
+      </div>
     </section>
   )
 }

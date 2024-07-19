@@ -18,7 +18,7 @@ export function TableTabFilter({
     onTabChange
 }: TableTabFilterProps) {
     return (
-        <div className="flex pl-[35px] gap-[25px] w-fulll items-center pr-[88px] mb-[28px]">
+        <div className="flex px-[35px] gap-[25px] w-[540px] items-center mb-[28px]">
             <div className="w-[20px] h-[20px]">
                 <Image src='icons/search.svg' width={20} height={20} className="w-full h-full" alt="search icon" />
             </div>

@@ -22,6 +22,7 @@ const config: Config = {
         gray: "#F0F0F0",
         lightGray: "#AAA",
         borderGray: '#E9E9E9',
+        border: '#EDEDED',
         red: '#EA4335',
         purple: '#6900FF',
         primaryBg: '#3a3a3a',
