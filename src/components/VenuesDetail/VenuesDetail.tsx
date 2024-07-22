@@ -36,7 +36,7 @@ const VenuesDetail: FC<VenuesType> = (props) => {
 
             <ul className='flex flex-col'>
             {
-              props.features.map((item,i) => (
+              props.features?.map((item,i) => (
                 <li className='' key={i}>{item}</li>
               ))
             }
