@@ -1,13 +1,9 @@
-import { Actions } from "@/components/Actions/Actions";
-import { HomeSection, HomeSectionWrapper } from "@/components/Home/HomeSection";
-import { useSearchParams } from 'next/navigation';
+import Main from '@/components/Main/Main';
 
 export default function Home() {
-  
   return (
     <main className="w-full overflow-y-hidden text-black flex h-screen">
-      <Actions />
-      <HomeSectionWrapper/>
+      <Main/>
     </main>
   );
 }

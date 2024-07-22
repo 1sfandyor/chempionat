@@ -23,16 +23,15 @@ const config: Config = {
         lightGray: "#AAA",
         borderGray: '#E9E9E9',
         border: '#EDEDED',
+        grayBorder: '#E4E4E4',
+        grayBg: '#f4f4f4',
         red: '#EA4335',
         purple: '#6900FF',
         primaryBg: '#3a3a3a',
         primaryBorder: '#F5F4F2',
         green: '#4FDA38',
+        orange: '#FF7A00',
       },
-
-      fontFamily: {
-        primary: ['Arial', 'sans-serif']
-      }
     },
 
     container: {

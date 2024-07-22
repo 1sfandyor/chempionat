@@ -1,12 +1,12 @@
 // Handle PNG files
 declare module '*.png' {
-  const value: string;
+  const value: string | StaticImport;
   export default value;
 }
 
 // Handle JPG files
 declare module '*.jpg' {
-  const value: string;
+  const value: string | StaticImport;
   export default value;
 }
 

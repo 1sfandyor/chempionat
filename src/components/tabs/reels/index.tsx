@@ -2,70 +2,71 @@ import React from 'react'
 import ReelsCard from './reels-card'
 import { TPost } from '@/interfaces/post.interface'
 import {v4 as uuidv4} from 'uuid'
+
 const Reels = () => {
   const posts: TPost[] = [
     {
-      id: uuidv4(),
+      key: uuidv4(),
       profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: "/avatar/post.png",
+      post_img: "/posts/bassketbol_set.png",
       stats: {
-        coment: 678,
+        comment: 678,
         like: 1209,
       }
     },
     {
-      id: uuidv4(),
+      key: uuidv4(),
       profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: "/avatar/post.png",
+      post_img: "/posts/volleybol_game.png",
       stats: {
-        coment: 678,
+        comment: 678,
         like: 1209,
       }
     },
     {
-      id: uuidv4(),
+      key: uuidv4(),
       profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: "/avatar/post.png",
+      post_img: "/posts/running_marathon.png",
       stats: {
-        coment: 678,
+        comment: 678,
         like: 1209,
       }
     },
     {
-      id: uuidv4(),
+      key: uuidv4(),
       profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: "/avatar/post.png",
+      post_img: "/posts/swimming.png",
       stats: {
-        coment: 678,
+        comment: 678,
         like: 1209,
       }
     },
     {
-      id: uuidv4(),
+      key: uuidv4(),
       profile_photo: '/avatar/avatar.png',
       user_name: 'Darkzone.esport',
       recently: '1 дн',
       posted_date: '7 дней назад',
       description: 'Каким был ваш самый захватывающим моментом в DARK ZONE ? Поделитесь своими игровыми историями 🦸🏻🔥',
-      post: "/avatar/post.png",
+      post_img: "/posts/coding.png",
       stats: {
-        coment: 678,
+        comment: 678,
         like: 1209,
       }
     },
@@ -75,7 +76,7 @@ const Reels = () => {
     <section className='flex pb-[100px] flex-col gap-[30px] overflow-auto h-[100vh]'>
       {
         posts.map((item) => (
-          <ReelsCard key={item.id} profile_photo={item.profile_photo} user_name={item.user_name} recently={item.recently} posted_date={item.posted_date} description={item.description} post={item.post} stats={item.stats}  />
+          <ReelsCard key={item.key} profile_photo={item.profile_photo} user_name={item.user_name} recently={item.recently} posted_date={item.posted_date} description={item.description} post_img={item.post_img} stats={item.stats}  />
         ))
       }
     </section>

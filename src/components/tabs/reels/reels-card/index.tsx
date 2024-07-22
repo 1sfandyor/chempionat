@@ -1,46 +1,23 @@
-import Image from 'next/image'
 import React from 'react'
 import { TPost } from '@/interfaces/post.interface'
+import { UserCard } from '@/components/UserCard/UserCard'
+import Image from 'next/image'
 
-const ReelsCard = ({profile_photo, user_name, recently, posted_date, description, post, stats}: TPost) => {
+const ReelsCard = ({profile_photo, user_name, recently, posted_date, description, post_img, stats}: TPost) => {
   return (
     <div className='w-full pb-[30px] border-b-[1px] border-solid border-primaryBorder'>
-      
       <div className='flex justify-between items-start mb-[14px]'>
-
         {/* User profile data */}
-        <div className='flex items-center gap-[5px]'>
-
-          {/* Avatar */}
-          <div className='w-[40px] h-[40px]'>
-            <Image width={40} height={40} className='w-full h-full object-cover object-center' src={profile_photo} alt='' />
-          </div>
-
-          <div className='flex flex-col'>
-            {/* User name */}
-            <h3 className='text-black font-[600] leading-normal text-[0.938rem]'>{user_name}</h3>
-            {/* Date */}
-            <span className='text-black text-[0.813rem] font-normal leading-normal'>{recently}</span>
-          </div>  
-        </div>
-
-        {/* Date */}
-        <div>
-          <span className='text-black font-[400] text-[0.813rem] leading-[normal]'>{posted_date}</span>
-        </div>
+        <UserCard isReels={true} img={profile_photo} name={user_name} lastOnline={recently} status={stats} postedAt={posted_date}/>
       </div>
 
       {/* Description */}
-      <p className='text-black text-[0.813rem] font-[400] leading-[18px] mb-[10px]'>
-        {description}
-      </p>
-
+      <p className='text-[13px] leading-[18px] mb-2.5'>{description}</p>
       {/* Post wrapper */}
       <div className='w-full h-[456px] relative'>
-
         {/* Post */}
         <div className='w-full h-full bg-black'>
-          <Image width={0} sizes='auto' height={456} className='w-full h-full object-contain' src={post} alt='post' />
+          <Image width={0} sizes='auto' height={456} className='w-full h-full object-contain' src={post_img} alt='post' />
         </div>
 
         {/* Functions */}
@@ -55,7 +32,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
               </div>
             </div>
 
-            <p className='text-white text-[0.688rem] font[600] leading-[normal] text-center'>{stats.coment}</p>
+            <p className='text-white text-[0.688rem] font[600] leading-[normal] text-center'>{stats?.comment}</p>
           </div>
 
           {/* like */}
@@ -66,7 +43,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
               </div>
             </div>
 
-            <p className='text-white text-[0.688rem] font[600] leading-[normal] text-center'>{stats.like}</p>
+            <p className='text-white text-[0.688rem] font[600] leading-[normal] text-center'>{stats?.like}</p>
           </div>
 
           {/* edit */}
@@ -89,7 +66,7 @@ const ReelsCard = ({profile_photo, user_name, recently, posted_date, description
         </div>
 
         {/*  */}
-      </div>
+        </div>
     </div>
   )
 }

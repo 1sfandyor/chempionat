@@ -42,3 +42,27 @@ body {
 a.active{
   color: #242424;
 }
+
+.avatar:hover + .user_tooltip {
+  display: block;
+}
+
+.user_tooltip{
+  display: none;
+  z-index: 99;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.32));
+}
+
+
+.tooltip{
+  position: absolute;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  z-index: -1;
+  border-top-right-radius: 10%;
+  transform: rotate(-476deg) skewX(-43deg) scale(1.2, 1.5);
+  bottom: 40px;
+  left: 18px;
+}

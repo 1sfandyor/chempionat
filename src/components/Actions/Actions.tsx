@@ -7,6 +7,7 @@ import { SFPro } from "@/utils/customFont";
 import { UserActions } from "../UserActions/UserActions";
 import { RegisterModal } from "../Login/RegisterModal/RegisterModal";
 import { RegisterModalType } from "@/interfaces/registerModal.interface";
+import { Privacy_Policy } from "../Privacy_Policy/Privacy_Policy";
 
 export const Actions = () => {
   const [nickname, setNickname] = useState<string | null>(null);
@@ -41,12 +42,14 @@ export const Actions = () => {
 
   return (
     <>
-      <div className="w-1/2 flex items-start justify-center container mx-auto pt-[19px]">
-        <Image src='logo.svg' className="2xl:mr-[82.91px]" alt="Logo" width={36} height={36} />
+      <div className="w-1/2 flex items-start justify-center container mx-auto pt-[19px] pb-[23px]">
+        <Image src='/logo.svg' className="2xl:mr-[82.91px]" alt="Logo" width={36} height={36} />
         {
           nickname
             ? <UserActions />
             : <div className="flex flex-col h-full w-[393px]">
+
+              {/* LOGIN & REGISTER BTN */}
               <div className="mb-[20px]">
                 <Button button={{
                   className: 'bg-black rounded-[65px] text-white gap-10 mr-[3px]',
@@ -69,7 +72,8 @@ export const Actions = () => {
                 }} />
               </div>
 
-              <div className="mb-[20px] flex items-center">
+              {/* CATEGORY SPORT */}
+              <div className="mb-[20px] flex items-start grow">
                 <p className="text-[15px] mr-16 font-medium text-black/40 leading-normal">Категории спорта</p>
 
                 <Button button={{
@@ -80,27 +84,29 @@ export const Actions = () => {
                   type: 'button'
                 }} />
               </div>
+              
+              <Privacy_Policy/>
             </div>
         }
       </div>
 
       {
-  openRegisterModal && (
-    <>
-      <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenRegisterModal(false)}></div>
-      <RegisterModal modal="register" modalItem={modalItem} />
-    </> 
-  )
-}
+        openRegisterModal && (
+          <>
+            <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenRegisterModal(false)}></div>
+            <RegisterModal modal="register" modalItem={modalItem} />
+          </> 
+        )
+      }
 
-{
-  openLoginModal && (
-    <>
-      <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenLoginModal(false)}></div>
-      <RegisterModal modal="login" modalItem={modalItem} />
-    </> 
-  )
-}
+      {
+        openLoginModal && (
+          <>
+            <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenLoginModal(false)}></div>
+            <RegisterModal modal="login" modalItem={modalItem} />
+          </> 
+        )
+      }
 
     </>
   );
