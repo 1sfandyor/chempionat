@@ -13,36 +13,37 @@ export const UserExtraAction: FC<UserCardType> = ({ nickname }) => {
   const nextOpponents = [
     {
       id: uuidv4(),
-      img: '/vanessa.png'
+      img: '/next_opponents/opponent_1.png'
     },
     {
       id: uuidv4(),
-      img: '/vanessa.png'
+      img: '/next_opponents/opponent_2.png'
     },
     {
       id: uuidv4(),
-      img: '/vanessa.png'
+      img: '/next_opponents/opponent_3.png'
     },
     {
       id: uuidv4(),
-      img: '/vanessa.png'
+      img: '/next_opponents/opponent_4.png'
     },
     {
       id: uuidv4(),
-      img: '/vanessa.png'
+      img: '/next_opponents/opponent_5.png'
     },
     {
       id: uuidv4(),
-      img: '/vanessa.png'
+      img: '/next_opponents/opponent_6.png'
+    },
+    ,
+    {
+      id: uuidv4(),
+      img: '/next_opponents/opponent_7.png'
     },
     {
       id: uuidv4(),
-      img: '/vanessa.png'
-    },
-    {
-      id: uuidv4(),
-      img: '/vanessa.png'
-    },
+      img: '/next_opponents/opponent_8.png'
+    }
   ]
 
   return (
@@ -53,8 +54,8 @@ export const UserExtraAction: FC<UserCardType> = ({ nickname }) => {
           <div className="flex items-center mb-[30px]">
             {
               nextOpponents.map(item => (
-                <button className="mr-[5px]" key={item.id}>
-                  <Image className="rounded-full w-10 h-10" src={item.img} alt="" width={40} height={40} />
+                <button className="mr-[5px]" key={item?.id}>
+                  <Image className="rounded-full w-10 h-10" src={item?.img as string} alt="" width={40} height={40} />
                 </button>
               ))
             }

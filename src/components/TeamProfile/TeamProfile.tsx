@@ -13,7 +13,10 @@ import { OpponentMatch, Rating, UserScore } from '@/components/tabs/UserInfo'
 import Reels from "../tabs/reels";
 import Players from "../tabs/players";
 import Team from "../tabs/teams";
-export const UserProfile = () => {
+
+
+
+export const TeamProfile = () => {
 
   const router = useRouter();
   const { value, onValueChange } = useTab();
@@ -33,26 +36,19 @@ export const UserProfile = () => {
       </div>
       
       <div className="px-[25px] overflow-x-hidden">
-        <UserCard isUserProfile={true}
-                  img="/janizakov.png"
-                  nickname="A.Janizakov"
+        <UserCard isTeamProfile={true}
+                  img="/teams/team_1.png"
+                  nickname="simba"
                   gear_icon="/gear.svg"
-                  birthLoc="Ташкент"
-                  age={27}
-                  userStat={[
-                    {
-                      icon: '/thunder.svg',
-                      state: '54'
-                    },
-                    {
-                      icon: '/breath.svg',
-                      state: '68%'
-                    },
-                    {
-                      icon: '/walk.svg',
-                      state: '24.6 км'
-                    },
-                  ]}/>
+                  sport_icon={'/football.png'}
+                  teamLoc="Ташкент"
+                  team_icon={'/team.svg'}
+                  team_members={7}
+                  energy={54}
+                  energy_icon={'/thunder.svg'}
+                  suggest="предлагать"
+                  write="написать"
+                  />
 
         <TableTabFilter className="px-0" tabs={profile_tab_items} value={value} onTabChange={onValueChange} />
 
@@ -67,6 +63,5 @@ export const UserProfile = () => {
         </section>
       </div>
       
-    </>
-  )
+    </>  )
 }

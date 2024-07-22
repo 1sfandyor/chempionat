@@ -69,6 +69,38 @@ export const UserCard: FC<UserCardType> = (props) => {
     </div>
   )
 
+  // Team Profile
+  const isTeamProfile = () => (
+    <div className="flex  mb-[14px] items-center w-full">
+        <div className="flex relative mr-2.5 ">
+          <Image className="flex min-w-[60px] min-h-[60px] shrink-0" src={`${props.img}`} alt="" width={60} height={60}/>
+        </div>
+
+        <div className="flex flex-col text-black mr-[17px]">
+          <p className="text-[15px] font-semibold leading-normal mr-2.5">@{props.nickname}</p>
+
+          <div className="flex items-center mb-[3px]">
+            <span className="flex items-center mr-2.5">
+              <Image className="w-[16px] h-[16px] mr-[5px]" src={props.sport_icon as string} alt="" width={16} height={16}>{}</Image>
+              <Image className="w-[20px] h-[20px]" src={props.team_icon as string} alt="" width={20} height={20} />
+              <span className="text-[13px] font-medium">{props.team_members}</span>
+            </span>
+            <div className="flex items-center mr-0.5">
+              <Image src={props.energy_icon as string} alt="" width={16} height={16}/>
+              <p className="text-[13px] font-semibold leading-normal ">{props.energy}</p>
+            </div>
+          </div>
+
+          <p className="flex items-center text-black/40 text-[11px] font-normal leading-[13px]">{props.teamLoc}</p>
+        </div>
+
+        <div className="flex items-center self-start">
+          <button className="text-[13px] bg-gray font-medium py-[3px] px-2.5 rounded-[5px] mr-[5px]">{props.write}</button>
+          <button className="text-[13px] bg-gray font-medium py-[3px] px-2.5 rounded-[5px]">{props.suggest}</button>
+        </div>
+      </div>
+  )
+
   // Reels
   const isReels = () => (
     <div className="flex w-full">
@@ -144,14 +176,14 @@ export const UserCard: FC<UserCardType> = (props) => {
   // TEAM
   const isTeam = () => (
     <div className="flex  mb-[14px] items-center w-full">
-        <div className="flex relative mr-2.5 ">
+        <div className="flex relative mr-2.5">
           <span className="absolute top-[5px] left-0 -translate-y-full w-[5px] h-[5px] rounded-full bg-green bg-no-repeat "/>
-          <Image className="flex min-w-[60px] min-h-[60px] shrink-0" src={`${props.img}`} alt="" width={60} height={60}/>
+          <Image className="flex min-w-[60px] min-h-[60px] shrink-0 cursor-pointer" src={`${props.img}`} alt="" width={60} height={60} onClick={() => router.push(`team/${props.name}`)} />
         </div>
 
         <div className="flex flex-col w-full text-black mr-[17px]">
           <div className="flex w-full items-center mb-[3px]">
-            <p className="text-[15px] font-semibold leading-normal mr-2.5">@{props.name}</p>
+            <p className="text-[15px] font-semibold leading-normal mr-2.5 cursor-pointer" onClick={() => router.push(`team/${props.name}`)}>@{props.name}</p>
             <div className="flex items-center mr-0.5">
               <Image src={props.energy_icon as string} alt="" width={16} height={16}/>
               <p className="text-[13px] font-semibold leading-normal ">{props.energy}</p>
@@ -353,9 +385,10 @@ export const UserCard: FC<UserCardType> = (props) => {
     : props.isIncoming ? isIncomeMsg()
     : props.isPlayers ? isPlayers()
     : props.isTeam ? isTeam()
+    : props.isTeamProfile ? isTeamProfile()
     : props.isTournament ? isTournament()
     : props.isOpponent ? isOpponent()
     : props.isMatch ? isMatch()
-    : <>dsada</>
+    : <></>
   )
 }

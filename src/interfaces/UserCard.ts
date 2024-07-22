@@ -16,7 +16,7 @@ export interface UserCardType {
   opponent_energy?: number,
   health_percentage?: string,
   location?: string,
-  // onClick?: () => void
+  onClick?: () => void
   msg?: string,
   incomingMsgDate?: string,
   sendRequest?: string,
@@ -46,6 +46,8 @@ export interface UserCardType {
   link?: string,
   img?: string
   playedGames?: string
+  write?: string,
+  suggest?: string,
   totalGames?: {
     game: string,
     count: number
@@ -75,6 +77,7 @@ export interface UserCardType {
   isIncoming?: boolean,
   isPlayers?: boolean,
   isTeam?: boolean,
+  isTeamProfile?: boolean,
   isTournament?: boolean,
   isOpponent?: boolean,
   isMatch?: boolean,

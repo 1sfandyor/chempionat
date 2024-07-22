@@ -8,7 +8,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },
@@ -19,7 +19,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },
@@ -30,7 +30,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },
@@ -41,7 +41,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },
@@ -52,7 +52,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },
@@ -63,7 +63,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },
@@ -74,7 +74,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },
@@ -85,7 +85,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },
@@ -96,7 +96,7 @@ export const Teams = [
     energy_icon: 'thunder.svg',
     energy: 54,
     sendReq: "предлагать",
-    teamIcon: 'team.svg',
+    teamIcon: '/team.svg',
     memebers: 7,
     sportType: '/football.png'
   },

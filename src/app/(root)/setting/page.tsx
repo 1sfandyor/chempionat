@@ -3,7 +3,6 @@ import { Actions } from "@/components/Actions/Actions";
 import { Button } from "@/components/Button/Button";
 import Form from "@/components/Form/Form";
 import ProfileUploader from "@/components/ImageUpload/ImageUpload";
-import { UserProfile } from "@/components/Profile/Profile";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
@@ -29,10 +28,10 @@ const Setting = () => {
   ];
 
   return (
-    <div className="w-full overflow-y-hidden text-black flex h-full">
+    <div className="w-full overflow-y-auto text-black flex h-full">
       <Actions /> 
-      <div className='w-1/2 overflow-y-hidden text-black'>
-        <div className='pt-[19px] w-[540px] px-6 border-x-[1px] overflow-hidden border-x-border'>
+      <div className='w-1/2 overflow-y-auto text-black'>
+        <div className='pt-[19px] w-[548px] px-6 border-x-[1px] overflow-hidden border-x-border'>
 
           {/* UPLOAD IMAGE */}
           <div className="flex items-center text-[15px] text-black font-medium mb-6">
@@ -49,22 +48,25 @@ const Setting = () => {
         </div>
 
         {/* UPDATE FORM */}
-        <div className="w-[540px] border-x-[1px] overflow-scroll border-x-border h-full bg-grayBg pt-[30px] px-[60px]">
-          <div className="flex flex-col h-[72%] grow ">
-            <p className="text-black text-[13px] font-medium mb-5">Данные пользователя</p>
-            <Form fields={fields} onSubmit={handleFormSubmit} />
-            
+        <div className="w-[548px] border-x-[1px] border-x-border h-full bg-grayBg pt-[30px] px-[60px]">
+          <div className="flex flex-col h-full grow ">
+            <div className="flex flex-col h-full">
+              <p className="text-black text-[13px] font-medium mb-5">Данные пользователя</p>
+              <Form fields={fields} onSubmit={handleFormSubmit} />
+              
 
-            <p className="text-black text-[13px] font-medium mb-5">Данные входа</p>
-            <Form fields={fields} onSubmit={handleFormSubmit} />
+              <p className="text-black text-[13px] font-medium mb-5">Данные входа</p>
+              <Form fields={fields} onSubmit={handleFormSubmit} />
+            </div>
+
+            <div className="mb-5">
+              <Button key={1} button={{
+                className: 'bg-black w-full rounded-[7px] py-[8px]',
+                onClick() {handleFormSubmit},
+                text: 'Submit'
+                }}/>
+            </div>
           </div>
-
-
-          <Button key={1} button={{
-          className: 'bg-black w-full rounded-[7px] py-[8px]',
-          onClick() {handleFormSubmit},
-          text: 'Submit'
-          }}/>
         </div>
       </div>
     </div>

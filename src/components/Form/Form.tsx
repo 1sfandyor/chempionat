@@ -31,9 +31,9 @@ const FormComponent: React.FC<FormComponentProps> = ({ fields, onSubmit }) => {
   };
 
   return (
-    <form className='flex flex-col items-end bg-white pt-[15px] pb-[22px] px-6 mb-[30px]' onSubmit={handleSubmit}>
+    <form className='flex flex-col items-end bg-white pt-[15px] pb-[22px] px-16 mb-[30px]' onSubmit={handleSubmit}>
       {fields.map((field, index) => (
-        <div className='mr-[63px] flex items-center mb-2.5' key={index}>
+        <div className='flex items-center mb-2.5' key={index}>
           <label className='mr-2.5' htmlFor={field.name}>{field.label}:</label>
           <input className='py-2 px-2.5 text-[13px] font-medium w-[230px] rounded-[4px] bg-[#F5F5F5]'
             type={field.type}
