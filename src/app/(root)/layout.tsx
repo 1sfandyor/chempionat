@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={SFPro.variable}>
       <head />
-      <body className={SFPro.variable}>
+      <body className={`h-screen ${SFPro.variable}`}>
         {children}
       </body>
 

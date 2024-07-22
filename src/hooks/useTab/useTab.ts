@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export function useTab(defaultValue: string = "all") {
-    const [value, setValue] = useState<string>(defaultValue);
+export const useTab = () => {
+  const [value, setValue] = useState<string>('profile'); // Default value
 
-    const onValueChange = (newValue: string) => {
-        setValue(newValue);
-    };
+const onValueChange = (newValue: string) => {
+  setValue(newValue); // Update tab value
+};
 
-    return { value, onValueChange };
-}
+  return { value, onValueChange }; // Return current value and updater function
+};

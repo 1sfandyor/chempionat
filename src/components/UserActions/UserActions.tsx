@@ -21,11 +21,11 @@ export const UserActions = () => {
                 energy_icon={'/thunder.svg'}
                 energy={54}
                 health_icon={'/breath.svg'}
-                health_percentage='32%'
-                />
+                health_percentage='32%' />
+                
       <CategorySport/>
       
-      <UserExtraAction/>
+      <UserExtraAction nickname={'A.Janizakov'}/>
     </div>
   )
 }

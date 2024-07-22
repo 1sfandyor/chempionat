@@ -1,7 +1,7 @@
 export const UserFreqActs = [
   {
     title: 'Профиль',
-    value: 'players',
+    value: 'matchs',
   },
   {
     title: 'Моя команда',
@@ -9,6 +9,6 @@ export const UserFreqActs = [
   },
   {
     title: 'Мои друзя',
-    value: 'match',
+    value: 'friends',
   }
 ];

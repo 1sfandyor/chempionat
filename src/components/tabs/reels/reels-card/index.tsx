@@ -1,7 +1,7 @@
 import React from 'react'
 import { TPost } from '@/interfaces/post.interface'
-import { UserCard } from '@/components/UserCard/UserCard'
 import Image from 'next/image'
+import { UserCard } from '@/components/UserCard/UserCard'
 
 const ReelsCard = ({profile_photo, user_name, recently, posted_date, description, post_img, stats}: TPost) => {
   return (

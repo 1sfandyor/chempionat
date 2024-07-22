@@ -4,8 +4,10 @@ import { TableTabFilter } from "../tab-filter"
 import { UserFreqActs } from "@/config/constants/UserFreqActTab";
 import {v4 as uuidv4} from 'uuid';
 import Image from "next/image";
+import { FC } from "react";
+import { UserCardType } from "@/interfaces/UserCard";
 
-export const UserExtraAction = () => {
+export const UserExtraAction: FC<UserCardType> = ({ nickname }) => {
   const { value, onValueChange } = useTab();
 
   const nextOpponents = [
@@ -45,7 +47,7 @@ export const UserExtraAction = () => {
 
   return (
     <>
-        <TableTabFilter className="px-0" tabs={UserFreqActs} value={value} onTabChange={onValueChange} />
+        <TableTabFilter nickname={nickname as string} className="px-0" tabs={UserFreqActs} value={value} onTabChange={onValueChange} />
         <div>
           <p className="text-[13px] font-medium mb-5">Предыдущие соперники</p>
           <div className="flex items-center mb-[30px]">

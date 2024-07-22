@@ -1,8 +1,7 @@
 'use client'
 import Image from "next/image";
 import NavLink from "../Custom/NavLink";
-import { ReactElement } from "react";
-
+import { usePathname, useSearchParams } from "next/navigation";
 
 export type TTab = {
     title: string;
@@ -13,25 +12,40 @@ export type TableTabFilterProps = {
     tabs: TTab[];
     value: string;
     onTabChange: (newValue: string) => void;
-    search?: boolean
-    className?: string
+    search?: boolean;
+    className?: string;
+    nickname?: string;
 };
 
-export function TableTabFilter({ tabs, onTabChange, search, className }: TableTabFilterProps) {
+export function TableTabFilter({ tabs, value, onTabChange, search, className, nickname }: TableTabFilterProps) {
+    const path = usePathname(); // Get the current pathname
+    const searchParams = useSearchParams(); // Get the current search parameters
+    const tabParam = searchParams.get('tab'); // Get the 'tab' parameter from the URL
+
     return (
-        <div className={`flex ${className ? 'px-0' : 'px-[35px]'}  gap-[25px] w-[540px] items-center mb-[28px]`}>
-            {search && <button className="w-[20px] h-[20px] cursor-pointer">
-                <Image src='icons/search.svg' width={20} height={20} className="w-full h-full" alt="search icon" />
-            </button>
-            }
+        <div className={`flex ${className ? 'px-0' : 'px-[35px]'} gap-[25px] w-[540px] items-center mb-[28px]`}>
+            {search && (
+                <button className="w-[20px] h-[20px] cursor-pointer">
+                    <Image src='icons/search.svg' width={20} height={20} className="w-full h-full" alt="search icon" />
+                </button>
+            )}
             <ul className="flex items-center gap-[15px] text-[0.938rem]">
-                {tabs.map(({ title, value }, index) => (
-                    <li className={`cursor-pointer font-medium leading-[17.9px] ${value !== value ? "text-black" : "text-black/40"}`} onClick={() => onTabChange(value)} key={index}>
-                        <NavLink href={`?tab=${title}`}>
-                            {title}
-                        </NavLink>
-                    </li>
-                ))}
+                {tabs.map(({ title, value: tabValue }, index) => {
+                    // Check if the current tab should be selected based on tabParam
+                    const isSelected = tabParam === tabValue;
+                    
+                    return (
+                        <li 
+                            key={index}
+                            className={`cursor-pointer font-medium leading-[17.9px] ${isSelected ? 'text-black' : 'text-black/40'}`} // Apply styles based on selection
+                            onClick={() => onTabChange(tabValue)} // Handle tab change
+                        >
+                            <NavLink href={nickname ? `/profile/@${nickname}?tab=${tabValue}` : `?tab=${tabValue}`}>
+                                {title}
+                            </NavLink>
+                        </li>
+                    );
+                })}
             </ul>
         </div>
     );

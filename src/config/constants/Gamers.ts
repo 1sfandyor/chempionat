@@ -4,7 +4,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -28,7 +28,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_2.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -52,7 +52,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_3.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -76,7 +76,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_4.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -100,7 +100,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_5.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -124,7 +124,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_6.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -148,7 +148,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_7.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -172,7 +172,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_8.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -196,7 +196,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_9.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -220,7 +220,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_10.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -244,7 +244,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -268,7 +268,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -292,7 +292,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -316,7 +316,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -340,7 +340,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -364,7 +364,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -388,7 +388,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -412,7 +412,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',
@@ -436,7 +436,7 @@ export const Gamers = [
     {
         id: uuidv4(),
         avatar: '/gamers/gamer_1.png',
-        name: '@cyber_crush',
+        name: 'cyber_crush',
         energy_icon: 'thunder.svg',
         energy: 54,
         sendReq: 'предлагать',

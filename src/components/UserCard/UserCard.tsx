@@ -49,7 +49,7 @@ export const UserCard: FC<UserCardType> = (props) => {
       <div className="flex flex-col">
         <div className="flex items-center mb-1">
           <p className="text-[17px] text-black font-semibold mr-4">@{props.nickname}</p>
-          <Image src={props.gear_icon as string} alt="" width={20} height={20}/>
+          <Image className="cursor-pointer" onClick={() => router.push(`/setting`)} src={props.gear_icon as string} alt="" width={20} height={20}/>
         </div>
         <p className="flex items-center text-[13px] text-black font-normal mb-[9px]">
           <span>{props.birthLoc}.</span>
@@ -206,7 +206,7 @@ export const UserCard: FC<UserCardType> = (props) => {
     <div className="flex  mb-[14px] items-start w-full">
         <div className="flex items-center">
           <p className="text-[22px] flex items-center font-extrabold leading-0 mr-2.5">:</p>
-          <Image className="flex min-w-[60px] min-h-[60px] shrink-0 mr-2.5" src={`${props.img}`} alt="" width={60} height={60}/>
+          <Image className="flex min-w-[60px] min-h-[60px] shrink-0 mr-2.5" src={`${props.opponent_img}`} alt="" width={60} height={60}/>
         </div>
         
         <div className="flex flex-col w-full text-black mr-[17px]">
@@ -347,24 +347,15 @@ export const UserCard: FC<UserCardType> = (props) => {
   )
 
   return (
-      props.isUser
-    ? isUser()
-    : props.isUserProfile
-    ? isUserProfile()
-    : props.isReels
-    ? isReels()
-    ? props.isIncoming
-    : isIncomeMsg()
-    : props.isPlayers
-    ? isPlayers()
-    : props.isTeam 
-    ? isTeam()
-    : props.isTournament 
-    ? isTournament()
-    : props.isOpponent
-    ? isOpponent()
-    : props.isMatch
-    ? isMatch()
-    : <></>
+      props.isUser ? isUser() 
+    : props.isUserProfile ? isUserProfile()
+    : props.isReels ? isReels()
+    : props.isIncoming ? isIncomeMsg()
+    : props.isPlayers ? isPlayers()
+    : props.isTeam ? isTeam()
+    : props.isTournament ? isTournament()
+    : props.isOpponent ? isOpponent()
+    : props.isMatch ? isMatch()
+    : <>dsada</>
   )
 }

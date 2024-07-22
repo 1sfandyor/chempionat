@@ -68,14 +68,14 @@ export interface UserCardType {
     icon: string,
     state: string
   }[]
+  
   isUser?: boolean,
-  isUserProfile?: boolean
-  isReels?: boolean
-  isIncoming?: boolean
-  isPlayers?: boolean
-  isTeam?: boolean
-  isTournament?: boolean
-  isOpponent?: boolean
-  isMatch?: boolean
-
+  isUserProfile?: boolean,
+  isReels?: boolean,
+  isIncoming?: boolean,
+  isPlayers?: boolean,
+  isTeam?: boolean,
+  isTournament?: boolean,
+  isOpponent?: boolean,
+  isMatch?: boolean,
   }
