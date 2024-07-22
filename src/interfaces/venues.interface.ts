@@ -9,6 +9,6 @@ export interface VenuesType {
   phone?: string,
   gallery?: string[]
   onClick?: () => void
-  description: string
-  features: string[]
+  description?: string
+  features?: string[]
 }
