@@ -1,9 +1,13 @@
-import React, { FC, useEffect, useState } from 'react';
 import { Search } from '../SearchBar/Searchbar';
 
+import React, { FC, useEffect, useState } from 'react';
 
+interface SearchBarProps {
+  setOpenCreateMeet: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const SearchBar = () => {
+const SearchBar: FC<SearchBarProps> = ({ setOpenCreateMeet }) => {
+
 
 
   const [container, setContainer] = useState<HTMLElement | null>(null);
