@@ -1,67 +1,53 @@
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';  // Corrected import statement
 
-const matchScores = [
-  { player1: 'A1', player2: 'B1', score: '2 : 3' },
-  { player1: 'A2', player2: 'B2', score: '1 : 1' },
-  { player1: 'A3', player2: 'B3', score: '0 : 0' },
-  { player1: 'A4', player2: 'B4', score: '3 : 2' },
-  { player1: 'A5', player2: 'B5', score: '1 : 0' },
-  { player1: 'A6', player2: 'B6', score: '4 : 1' },
-  { player1: 'A7', player2: 'B7', score: '2 : 2' },
-  { player1: 'A8', player2: 'B8', score: '5 : 3' },
-  { player1: 'A9', player2: 'B9', score: '3 : 4' },
-  { player1: 'A10', player2: 'B10', score: '0 : 1' },
-];
+interface Scores {
+    player1: number;
+    player2: number;
+}
 
+export default function Home() {
+    const [scores, setScores] = useState<Scores>({ player1: 0, player2: 0 });
 
-const AnimatedScoreCards4 = () => {
-  const [results, setResults] = useState<number[]>([]);
+    const increaseScore = (player: keyof Scores) => {
+        setScores(prevScores => ({ ...prevScores, [player]: prevScores[player] + 1 }));
+    };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setResults((prevResults) => {
-        const nextResult = prevResults.length;
-        return nextResult < 10 ? [...prevResults, nextResult] : prevResults;
-      });
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div id="animation-container" className="relative overflow-hidden h-screen flex items-center justify-center">
-      {results.map((resultCount, index) => {
-        const match = matchScores[resultCount % 10];
-        return (
-          <div
-            key={index}
-            className={`score-card absolute flex items-center p-4 bg-white rounded-lg shadow-md`}
-            style={{
-              animation: `bounceIn 12s ease-in-out infinite`,
-              bottom: '0%',
-            }}
-          >
-            <Image 
-              width={40}
-              height={40}
-              src={`https://via.placeholder.com/40?text=${match.player1}`}
-              alt="Player 1"
-              className="avatar rounded-full"
-            />
-            <span className="mx-2 text-xl">{match.score}</span>
-            <Image 
-              width={40}
-              height={40}
-              src={`https://via.placeholder.com/40?text=${match.player2}`}
-              alt="Player 2"
-              className="avatar rounded-full"
-            />
-          </div>
-        );
-      })}
-    </div>
-  );
-};
-
-export default AnimatedScoreCards4;
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen py-2">
+            <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+                <div className="flex space-x-10">
+                    {Object.entries(scores).map(([player, score]) => (
+                        <div key={player} className="flex flex-col items-center">
+                            <Image 
+                                src={`/${player}.jpg`} 
+                                alt={`Player ${player.slice(-1)}`} 
+                                width={96}  // Required for Image component
+                                height={96} // Required for Image component
+                                className="rounded-full border-4 border-gray-800"
+                            />
+                            <AnimatePresence>
+                                <motion.div
+                                    key={score}
+                                    initial={{ opacity: 0, scale: 0.85 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.5 }}
+                                    className="text-2xl font-bold my-2"
+                                >
+                                    {score}
+                                </motion.div>
+                            </AnimatePresence>
+                            <button 
+                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                onClick={() => increaseScore(player as keyof Scores)}
+                            >
+                                Score!
+                            </button>
+                        </div>
+                    ))}
+                </div>
+            </main>
+        </div>
+    );
+}
