@@ -63,8 +63,8 @@ export interface UserCardType {
     energy: number
   }[],
   status?: {
-    comment: number,
-    like: number,
+    comment?: number,
+    like?: number,
   },
   userStat?: {
     icon: string,
@@ -73,6 +73,7 @@ export interface UserCardType {
   
   isUser?: boolean,
   isUserProfile?: boolean,
+  isMemberProfile?: boolean
   isReels?: boolean,
   isIncoming?: boolean,
   isPlayers?: boolean,

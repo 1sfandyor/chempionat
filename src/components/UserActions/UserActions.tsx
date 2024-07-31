@@ -1,13 +1,12 @@
 'use client'
-import Image from 'next/image';
 import { CategorySport } from '../CategorySport/CategorySport';
 import { UserExtraAction } from '../UserExtraAction/UserExtraAction';
-import { useRouter } from 'next/navigation';
 import { UserCard } from '../UserCard/UserCard';
-
-export const UserActions = () => {
-
-  const router = useRouter();
+interface UserActionsProps {
+  setOpenCreateMeet: (open: boolean) => void;
+  setOpenSearchBar: (open: boolean) => void;
+}
+export const UserActions: React.FC<UserActionsProps> = ({ setOpenCreateMeet, setOpenSearchBar }) => {
 
   return (
     <div className='w-[393px] flex flex-col h-full'>
@@ -22,8 +21,7 @@ export const UserActions = () => {
                 energy={54}
                 health_icon={'/breath.svg'}
                 health_percentage='32%' />
-                
-      <CategorySport/>
+      <CategorySport setOpenCreateMeet={setOpenCreateMeet} setOpenSearchBar={setOpenSearchBar} />
       
       <UserExtraAction nickname={'A.Janizakov'}/>
     </div>

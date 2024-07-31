@@ -20,7 +20,7 @@ export const UserCard: FC<UserCardType> = (props) => {
       <div>
         <ul className='flex items-center'>
           <li className='mr-[15px]'>
-            <button className='flex items-center'>
+            <button className='flex items-center' onClick={() => router.push('/messages')}>
               <Image className='mr-1' src={props.chatIcon as string} alt={"Notifications"} width={20} height={20}/>
               <span className='text-black font-medium text-[13px] leading-normal'>{props.notificationCount}</span>
             </button>
@@ -69,6 +69,34 @@ export const UserCard: FC<UserCardType> = (props) => {
     </div>
   )
 
+    // UserProfile
+    const isMemberProfile = () => (
+      <div className="flex items-center mb-[25px]">
+        <Image className="rounded-full mr-[16px]" src={props.img as string} alt="User avatar" width={80} height={80}/>
+        <div className="flex flex-col">
+          <div className="flex items-center mb-1">
+            <p className="text-[17px] text-black font-semibold mr-4">@{props.nickname}</p>
+
+
+          </div>
+          <p className="flex items-center text-[13px] text-black font-normal mb-[9px]">
+            <span>{props.birthLoc}.</span>
+            <span>{props.age} лет.</span>
+          </p>
+          <div className="flex items-center">
+            {
+              props.userStat?.map((item,i) => (
+                <p className="flex items-center text-black text-[13px] leading-none font-medium mr-2.5" key={i}>
+                  <Image src={item.icon as string} alt="" width={20} height={20}/>
+                  <span>{item.state}</span>
+                </p>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    )
+
   // Team Profile
   const isTeamProfile = () => (
     <div className="flex  mb-[14px] items-center w-full">
@@ -104,13 +132,13 @@ export const UserCard: FC<UserCardType> = (props) => {
   // Reels
   const isReels = () => (
     <div className="flex w-full">
-      <Image className="w-10 h-10 mr-2.5" src={`${props.img}`} alt="" width={40} height={40}/>
+      <Image className="cursor-pointer hover:opacity-80 acritve:opacity-60 w-10 h-10 mr-2.5" onClick={() => router.push(`memeber-profile/${props.name}`)} src={`${props.img}`} alt="" width={40} height={40}/>
       <div className="flex flex-col w-full text-black">
         <div className="flex w-full items-center justify-between">
-          <p className="text-[15px] font-semibold leading-normal">{props.name}</p>
-          <p className="text-[13px] font-normal leading-normal text-nowrap">{props.postedAt}</p>
+          <p className="text-[15px] font-semibold leading-normal cursor-pointer hover:opacity-80 acritve:opacity-60" onClick={() => router.push(`member-profile/@${props.name}`)}>{props.name}</p>
+          <p className="text-[13px] font-normal leading-normal text-nowrap pointer-events-none	">{props.postedAt}</p>
         </div>
-        <p className="text-[13px] font-normal ">{props.lastOnline}</p>
+        <p className="text-[13px] font-normal pointer-events-none	">{props.lastOnline}</p>
       </div>
     </div>
 )
@@ -234,6 +262,7 @@ export const UserCard: FC<UserCardType> = (props) => {
       </div>
   )
 
+  // OPPONENT
   const isOpponent = () => (
     <div className="flex  mb-[14px] items-start w-full">
         <div className="flex items-center">
@@ -276,6 +305,7 @@ export const UserCard: FC<UserCardType> = (props) => {
       </div>
   )
 
+  // MATCH
   const isMatch = () => (
     <div className="flex  mb-[14px] items-start w-full">
         {/* OPPONENTS IMAGE */}
@@ -381,6 +411,7 @@ export const UserCard: FC<UserCardType> = (props) => {
   return (
       props.isUser ? isUser() 
     : props.isUserProfile ? isUserProfile()
+    : props.isMemberProfile ? isMemberProfile()
     : props.isReels ? isReels()
     : props.isIncoming ? isIncomeMsg()
     : props.isPlayers ? isPlayers()

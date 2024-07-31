@@ -8,11 +8,17 @@ import { UserActions } from "../UserActions/UserActions";
 import { RegisterModal } from "../Login/RegisterModal/RegisterModal";
 import { RegisterModalType } from "@/interfaces/registerModal.interface";
 import { Privacy_Policy } from "../Privacy_Policy/Privacy_Policy";
+import AnimatedScoreCards from "../Animation/Animation";
+import CreateMeeting from "../createMeeting/createMeeating";
+import SearchBar from "../Search/Search";
+import Link from "next/link";
 
 export const Actions = () => {
   const [nickname, setNickname] = useState<string | null>(null);
   const [openRegisterModal, setOpenRegisterModal] = useState(false);
   const [openLoginModal, setOpenLoginModal] = useState(false);
+  const [openSearchBar, setOpenSearchBar] = useState(false);
+  const [openCreateMeet, setOpenCreateMeet] = useState(false);
   const [email, setEmail] = useState<string | null>(null);
   const [pin, setPin] = useState<string | null>(null);
   const [storedNickname, setStoredNickname] = useState<string | null>()
@@ -43,10 +49,12 @@ export const Actions = () => {
   return (
     <>
       <div className="w-1/2 flex items-start justify-center container mx-auto pt-[19px] pb-[23px]">
-        <Image src='/logo.svg' className="2xl:mr-[82.91px]" alt="Logo" width={36} height={36} />
+        <Link className="hover:opacity-80 active:opacity-60" href={'/'}>
+          <Image src='/logo.svg' className="2xl:mr-[82.91px]" alt="Logo" width={36} height={36} />
+        </Link>
         {
           nickname
-            ? <UserActions />
+            ? <UserActions setOpenSearchBar={setOpenSearchBar} setOpenCreateMeet={setOpenCreateMeet} />
             : <div className="flex flex-col h-full w-[393px]">
 
               {/* LOGIN & REGISTER BTN */}
@@ -84,7 +92,7 @@ export const Actions = () => {
                   type: 'button'
                 }} />
               </div>
-              
+              <AnimatedScoreCards/>
               <Privacy_Policy/>
             </div>
         }
@@ -93,7 +101,7 @@ export const Actions = () => {
       {
         openRegisterModal && (
           <>
-            <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenRegisterModal(false)}></div>
+            <div className="fixed top-0 left-0 w-full h-full bg-black/40 z-50" onClick={() => setOpenRegisterModal(false)}></div>
             <RegisterModal modal="register" modalItem={modalItem} />
           </> 
         )
@@ -102,8 +110,27 @@ export const Actions = () => {
       {
         openLoginModal && (
           <>
-            <div className="fixed top-0 left-0 w-full h-full bg-black/40" onClick={() => setOpenLoginModal(false)}></div>
+            <div className="fixed top-0 left-0 w-full h-full bg-black/40 z-50" onClick={() => setOpenLoginModal(false)}></div>
             <RegisterModal modal="login" modalItem={modalItem} />
+          </> 
+        )
+      }
+
+      {
+        openCreateMeet && (
+          <>
+            <div className="fixed top-0 left-0 w-full h-full bg-black/40 z-50" onClick={() => setOpenCreateMeet(false)}></div>
+            <CreateMeeting modalItem={modalItem} setOpenCreateMeet={setOpenCreateMeet}/>
+          </> 
+        )
+      }
+
+
+      {
+        openSearchBar && (
+          <>
+            <div className="fixed top-0 left-0 w-full h-full bg-black/40 z-50" onClick={() => setOpenCreateMeet(false)}></div>
+            <SearchBar setOpenCreateMeet={setOpenCreateMeet}/>
           </> 
         )
       }

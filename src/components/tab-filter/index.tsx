@@ -35,11 +35,9 @@ export function TableTabFilter({ tabs, value, onTabChange, search, className, ni
                     const isSelected = tabParam === tabValue;
                     
                     return (
-                        <li 
-                            key={index}
-                            className={`cursor-pointer font-medium leading-[17.9px] ${isSelected ? 'text-black' : 'text-black/40'}`} // Apply styles based on selection
-                            onClick={() => onTabChange(tabValue)} // Handle tab change
-                        >
+                        <li key={index}
+                            className={`cursor-pointer hover:text-black font-medium leading-[17.9px] ${isSelected ? 'text-black' : 'text-black/40'}`}
+                            onClick={() => onTabChange(tabValue)} >
                             <NavLink href={nickname ? `/profile/@${nickname}?tab=${tabValue}` : `?tab=${tabValue}`}>
                                 {title}
                             </NavLink>

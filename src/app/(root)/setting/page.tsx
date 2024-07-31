@@ -54,11 +54,10 @@ const Setting = () => {
               <p className="text-black text-[13px] font-medium mb-5">Данные пользователя</p>
               <Form fields={fields} onSubmit={handleFormSubmit} />
               
-
               <p className="text-black text-[13px] font-medium mb-5">Данные входа</p>
-              <Form fields={fields} onSubmit={handleFormSubmit} />
+              <Form fields={fields} onSubmit={handleFormSubmit}/>
+              
             </div>
-
             <div className="mb-5">
               <Button key={1} button={{
                 className: 'bg-black w-full rounded-[7px] py-[8px]',

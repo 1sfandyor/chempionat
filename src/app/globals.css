@@ -9,6 +9,65 @@
   --font-sfpro-display: 'SF Pro Display', sans-serif;
 }
 
+
+@keyframes bubbleUpOdd {
+  0% {
+    width: 150px;
+    height: 50px;
+    bottom: 0;
+    opacity: 0.1;
+    transform: translateX(-50%) rotate(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(50%) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) rotate(0);
+  }
+  75% {
+    opacity: 0.1;
+    transform: translateX(50%) rotate(0);
+  }
+  100% {
+    width: 200px;
+    height: 70px;
+    bottom: 100%;
+    opacity: 0;
+    transform: translateX(-50%) rotate(0);
+  }
+}
+
+@keyframes bubbleUpEven {
+  0% {
+    width: 150px;
+    height: 50px;
+    bottom: 0;
+    opacity: 0.1;
+    transform: translateX(-50%) rotate(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(50%) rotate(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) rotate(0);
+  }
+  75% {
+    opacity: 0.1;
+    transform: translateX(50%) rotate(0);
+  }
+  100% {
+    width: 200px;
+    height: 70px;
+    bottom: 100%;
+    opacity: 0;
+    transform: translateX(-50%) rotate(0);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -65,4 +124,26 @@ a.active{
   transform: rotate(-476deg) skewX(-43deg) scale(1.2, 1.5);
   bottom: 40px;
   left: 18px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator, input[type="date"]::-webkit-calendar-picker-indicator {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left:-7px; /* Adjust as needed */
+  transform: translateY(-50%);
+  width: 16px; 
+  height: 16px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none; 
+}
+
+select::-webkit-calendar-picker-indicator {
+  display: none; 
+}
+
+.background{
+  background: linear-gradient(180deg, #707070 0%, #323232 96.74%), #FFF500;
 }
