@@ -34,7 +34,7 @@ const AnimatedScoreCards = () => {
             const match = matchScores[resultCount % 10];
             return (
                 <div key={index}
-                className={`absolute flex items-center p-1.5 bg-white rounded-full shadow-md justify-between`}
+                className={`absolute z-50 flex items-center p-1.5 bg-white rounded-full shadow-md justify-between `}
                 style={{
                     animation: `${index % 2 === 0 ? 'bubbleUpEven' : 'bubbleUpOdd'} 12s ease-in-out infinite`,
                     bottom: '0%',
