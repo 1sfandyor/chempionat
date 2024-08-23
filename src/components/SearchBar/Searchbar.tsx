@@ -1,12 +1,9 @@
 import Image from "next/image"
-import React, { FC, useEffect, useState } from 'react';
-
-
-
+import React, { useState } from 'react';
 
 const sports = [
   { id: 1, icon: '/football.png', name: "Futboll" },
-  { id: 2, icon: '/tennis .png', name: "Tennis" },
+  { id: 2, icon: '/tennis.png', name: "Tennis" },
   { id: 3, icon: '/bassketball.png', name: "Basketball" },
   { id: 4, icon: '/volleyball.png', name: "Voleball" },
   { id: 5, icon: '/cs.png', name: "CS 2" },
@@ -35,8 +32,8 @@ export const Search = () => {
 
 
   return (
-    <div className="bg-white flex px-10 mb-[30px]">
-      <div className="flex items-start flex-col">
+    <div className="bg-white flex px-2.5 min-h-[280px] w-full">
+      <div className="flex items-start flex-col w-full">
 
       <div className="relative w-full flex-col">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -50,7 +47,8 @@ export const Search = () => {
             type="search" 
             id="default-search" 
             className="block appearance-none w-full p-5 ps-14 text-sm text-black border-b border-b-grayBorder focus:outline-none" 
-            placeholder="Search Mockups, Logos..." 
+            placeholder="Search Mockups, Logos..."
+            style={{width: '100%'}}
             required />
       </div>
 
@@ -58,8 +56,8 @@ export const Search = () => {
         <p className='text-[13px] text-[#8D8D8D] mb-[17px]'>Ключевые слова</p>
         <div className='flex items-center flex-wrap'>
         {filteredSports.map((sport) => (
-          <li key={sport.id} className="flex item-center text-[17px] py-[7px] px-2.5 mr-0.5 mb-1 bg-[#F4F3F1] border-none rounded-[12px]">
-            <Image className='mr-1' src={sport.icon} alt='' width={16} height={16}/>
+          <li key={sport.id} className="flex  py-[7px] px-2.5 mr-0.5 mb-1 bg-[#F4F3F1] border-none rounded-[12px]">
+            <Image className='mr-1 flex self-center' src={sport.icon} alt='' width={20} height={20}/>
             {sport.name}
           </li>
         ))}

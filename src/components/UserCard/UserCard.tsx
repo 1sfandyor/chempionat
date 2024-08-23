@@ -20,19 +20,19 @@ export const UserCard: FC<UserCardType> = (props) => {
       <div>
         <ul className='flex items-center'>
           <li className='mr-[15px]'>
-            <button className='flex items-center' onClick={() => router.push('/messages')}>
+            <button className='flex items-center hover:opacity-50 active:opacity-100 transition-all duration-300' onClick={() => router.push('/messages')}>
               <Image className='mr-1' src={props.chatIcon as string} alt={"Notifications"} width={20} height={20}/>
               <span className='text-black font-medium text-[13px] leading-normal'>{props.notificationCount}</span>
             </button>
           </li>
           <li className='mr-[15px]'>
-            <button className='flex items-center'>
+            <button className='flex items-center hover:opacity-50 active:opacity-100 transition-all duration-300'>
               <Image src={props.energy_icon as string} className='mr-1' alt={"Power"} width={20} height={20}/>
               <span className='text-black font-medium text-[13px] leading-normal'>{props.energy}</span>
             </button>
           </li>
           <li className='mr-[15px]'>
-            <button className='flex items-center'>
+            <button className='flex items-center hover:opacity-50 active:opacity-100 transition-all duration-300'>
               <Image src={props.health_icon as string} className='mr-1' alt={'Health'} width={20} height={20}/>
               <span className='text-black font-medium text-[13px] leading-normal'>{props.health_percentage}</span>
             </button>
@@ -76,8 +76,6 @@ export const UserCard: FC<UserCardType> = (props) => {
         <div className="flex flex-col">
           <div className="flex items-center mb-1">
             <p className="text-[17px] text-black font-semibold mr-4">@{props.nickname}</p>
-
-
           </div>
           <p className="flex items-center text-[13px] text-black font-normal mb-[9px]">
             <span>{props.birthLoc}.</span>
@@ -123,8 +121,8 @@ export const UserCard: FC<UserCardType> = (props) => {
         </div>
 
         <div className="flex items-center self-start">
-          <button className="text-[13px] bg-gray font-medium py-[3px] px-2.5 rounded-[5px] mr-[5px]">{props.write}</button>
-          <button className="text-[13px] bg-gray font-medium py-[3px] px-2.5 rounded-[5px]">{props.suggest}</button>
+          <button className="text-[13px] bg-gray hover:bg-black hover:text-white transition-all duration-200 font-medium py-[3px] px-2.5 rounded-[5px] mr-[5px]">{props.write}</button>
+          <button className="text-[13px] bg-gray hover:bg-black hover:text-white transition-all duration-200 font-medium py-[3px] px-2.5 rounded-[5px]">{props.suggest}</button>
         </div>
       </div>
   )
@@ -175,7 +173,7 @@ export const UserCard: FC<UserCardType> = (props) => {
         </div>
 
         <div className="flex flex-col w-full text-black mr-[17px]">
-          <div className="flex w-full items-center mb-[5px]">
+          <div className="flex w-full items-center mb-[5px] cursor-pointer" onClick={() => router.push(`/member-profile/@${props.name}`)}>
             <p className="text-[15px] font-semibold leading-normal mr-2.5">@{props.name}</p>
             <div className="flex items-center mr-0.5">
               <Image src={props.energy_icon as string} alt="" width={16} height={16}/>

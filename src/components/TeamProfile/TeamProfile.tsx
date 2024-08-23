@@ -5,13 +5,13 @@ import { useRouter } from "next/navigation"
 import { UserCard } from "../UserCard/UserCard";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { TableTabFilter } from "@/components/tab-filter";
-import { profile_tab_items } from "@/config/constants/profile.tabs";
 import { useTab } from "@/hooks/useTab/useTab";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { OpponentMatch, Rating, UserScore } from '@/components/tabs/UserInfo'
 import Reels from "../tabs/reels";
 import Players from "../tabs/players";
+import { team_tab_items } from "@/config/constants/team.tabs";
 
 
 export const TeamProfile = () => {
@@ -19,12 +19,15 @@ export const TeamProfile = () => {
   const router = useRouter();
   const { value, onValueChange } = useTab();
   const searchParams = useSearchParams();
-  const tabValue = searchParams.get('tab') || 'matchs'; 
+  const tabValue = searchParams.get('tab') || 'members'; 
 
   useEffect(() => {
     if (value !== tabValue) {
       onValueChange(tabValue);
     }
+    
+    router.push(`?tab=${tabValue}`)
+    
   }, [tabValue, value, onValueChange]);
   return (
     <>
@@ -48,7 +51,7 @@ export const TeamProfile = () => {
                   write="написать"
                   />
 
-        <TableTabFilter className="px-0" tabs={profile_tab_items} value={value} onTabChange={onValueChange} />
+        <TableTabFilter className="px-0" tabs={team_tab_items} value={value} onTabChange={onValueChange} />
 
         {/* Content Wrapper */}
         <section className='w-[540px]'>
@@ -57,6 +60,7 @@ export const TeamProfile = () => {
           {tabValue === 'reels' && <Reels/>}
           {tabValue === 'friends' && <Players/>}
           {tabValue === 'rating' && <Rating/>}
+          {tabValue === 'members' && <Players/>}
         </section>
       </div>
       

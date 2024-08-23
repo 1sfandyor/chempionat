@@ -36,6 +36,7 @@ export const Actions = () => {
     setPin(storedPin);
   }, [openRegisterModal, storedNickname]);
 
+
   const modalItem: RegisterModalType = {
     text: email === null
       ? "🧔👩 Спасибо что выбрал здоровый образ жизни!"
@@ -60,7 +61,7 @@ export const Actions = () => {
               {/* LOGIN & REGISTER BTN */}
               <div className="mb-[20px]">
                 <Button button={{
-                  className: 'bg-black rounded-[65px] text-white gap-10 mr-[3px]',
+                  className: 'bg-black rounded-[65px] text-white gap-10 mr-[3px] hover:bg-black/80 transition-all duration-200 active:bg-black/60',
                   spanClasses: 'text-[15px] font-semibold leading-normal',
                   onClick: () => setOpenLoginModal(true),
                   px: 'px-[22px]',
@@ -70,8 +71,8 @@ export const Actions = () => {
                 }} />
 
                 <Button button={{
-                  className: `bg-gray rounded-[65px] gap-10`,
-                  spanClasses: `text-[15px] text-black  font-semiBold leading-normal ${SFPro.variable}`,
+                  className: `bg-gray rounded-[65px] gap-10 hover:bg-gray transition-all duration-200 active:bg-gray`,
+                  spanClasses: `text-[15px] text-black font-semiBold leading-normal ${SFPro.variable}`,
                   onClick: () => setOpenRegisterModal(true),
                   px: 'px-[22px]',
                   py: 'py-[15px]',
@@ -86,7 +87,7 @@ export const Actions = () => {
 
                 <Button button={{
                   className: ``,
-                  spanClasses: `text-[15px] text-black  font-medium text-black/40 leading-normal ${SFPro.variable}`,
+                  spanClasses: `text-[15px] text-black  font-medium text-black/40 leading-normal ${SFPro.variable} hover:text-black transition-all duration-200 active:text-black/80`,
                   onClick: () => setOpenRegisterModal(true),
                   text: 'добавить',
                   type: 'button'
@@ -119,7 +120,7 @@ export const Actions = () => {
       {
         openCreateMeet && (
           <>
-            <div className="fixed top-0 left-0 w-full h-full bg-black/40 z-50" onClick={() => setOpenCreateMeet(false)}></div>
+            <div className="fixed top-0 left-0 w-full h-full  z-50" onClick={() => setOpenCreateMeet(false)}></div>
             <CreateMeeting modalItem={modalItem} setOpenCreateMeet={setOpenCreateMeet}/>
           </> 
         )
@@ -129,7 +130,7 @@ export const Actions = () => {
       {
         openSearchBar && (
           <>
-            <div className="fixed top-0 left-0 w-full h-full bg-black/40 z-50" onClick={() => setOpenCreateMeet(false)}></div>
+            <div className="fixed top-0 left-0 w-full h-full z-50" onClick={() => setOpenSearchBar(false)}></div>
             <SearchBar setOpenCreateMeet={setOpenCreateMeet}/>
           </> 
         )
