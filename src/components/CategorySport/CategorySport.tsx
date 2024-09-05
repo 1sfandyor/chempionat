@@ -13,8 +13,8 @@ export const CategorySport: FC<CategorySportProps> = ({ setOpenCreateMeet, setOp
   return (
     <div className="flex flex-col items-start grow">
       <div className="flex items-center text-black/40 text-[15px] font-medium leading-normal mb-[23px]">
-        <p className="mr-16">Категории спорта</p>
-        <button className="hover:text-black active:opacity-60" onClick={() => setOpenSearchBar(true)}>добавить</button>
+        <p className="mr-16 text-black">Категории спорта</p>
+        <button className="text-black hover:text-purple active:opacity-60" onClick={() => setOpenSearchBar(true)}>добавить</button>
       </div>
 
       <div className="flex items-start flex-col">

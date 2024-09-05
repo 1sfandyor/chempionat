@@ -36,7 +36,7 @@ export function TableTabFilter({ tabs, value, onTabChange, search, className, ni
                     
                     return (
                         <li key={index}
-                            className={`cursor-pointer hover:text-black transition-all duration-200 font-medium leading-[17.9px] ${isSelected ? 'text-black' : 'text-black/40'}`}
+                            className={`cursor-pointer hover:text-purple transition-all duration-200 font-medium leading-[17.9px] ${isSelected ? 'text-purple' : 'text-black'}`}
                             onClick={() => onTabChange(tabValue)} >
                             <NavLink href={nickname ? `/profile/@${nickname}?tab=${tabValue}` : `?tab=${tabValue}`}>
                                 {title}

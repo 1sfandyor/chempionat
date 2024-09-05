@@ -145,9 +145,6 @@ body {
   background: transparent;
 }
 
-a.active{
-  color: #242424;
-}
 
 .avatar:hover + .user_tooltip {
   display: block;
