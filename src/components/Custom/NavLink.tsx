@@ -1,6 +1,6 @@
 "use client"
 
-import { useParams, useSearchParams,  } from "next/navigation";
+import { useSearchParams,  } from "next/navigation";
 import Link from "next/link";
 import { ReactNode, HTMLProps } from "react";
 

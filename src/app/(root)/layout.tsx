@@ -1,24 +1,16 @@
-import type { Metadata } from "next";
-import { SFPro } from "@/utils/customFont";
-import "../globals.css";
+import { Actions } from '@/components/Actions/Actions'
+import { ChildProps } from '@/interfaces/types'
+import React from 'react'
 
-export const metadata: Metadata = {
-  title: "Chempion Social App",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const HomeLayout = ({children}: ChildProps) => {
   return (
-    <html lang="en" className={SFPro.variable}>
-      <head />
-      <body className={`h-screen ${SFPro.variable}`}>
+    <main className="w-full overflow-y-hidden text-black flex h-screen">
+      <Actions />
+      <section className='w-1/2 overflow-y-hidden'>
         {children}
-      </body>
-
-
-    </html>
-  );
+      </section>
+    </main>
+  )
 }
+
+export default HomeLayout

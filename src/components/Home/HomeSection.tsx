@@ -25,8 +25,7 @@ export const HomeSection: React.FC = () => {
   }, [tabValue, value, onValueChange]);
 
   return (
-    <section className='w-1/2 overflow-y-hidden'>
-      <div className='pt-[19px] w-[540px] border-x-[1px] border-x-border h-full'>
+      <div className='pt-[19px] w-[540px] border-x-[1px] border-x-border/5 h-full'>
         <TableTabFilter search={true} tabs={tab_items} value={value} onTabChange={onValueChange} />
 
         {/* Content Wrapper */}
@@ -39,7 +38,6 @@ export const HomeSection: React.FC = () => {
           {tabValue === 'venues' && <Venues />}
         </section>
       </div>
-    </section>
   );
 };
 

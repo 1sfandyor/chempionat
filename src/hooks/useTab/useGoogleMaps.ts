@@ -18,6 +18,7 @@ const useGoogleMaps = (apiKey: string) => {
     script.onload = () => {
       setIsLoaded(true);
     };
+    
     document.body.appendChild(script);
 
     return () => {

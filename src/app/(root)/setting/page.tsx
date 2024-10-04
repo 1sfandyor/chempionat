@@ -29,7 +29,6 @@ const Setting = () => {
 
   return (
     <div className="w-full overflow-y-auto text-black flex h-full">
-      <Actions /> 
       <div className='w-1/2 overflow-y-auto text-black'>
         <div className='pt-[19px] w-[548px] px-6 border-x-[1px] overflow-hidden border-x-border'>
 

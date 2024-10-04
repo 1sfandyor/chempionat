@@ -13,7 +13,7 @@ export const CategorySport: React.FC<CategorySportProps> = ({ setOpenCreateMeet,
 
   return (
     <div className="flex flex-col items-start grow">
-      <div className="flex items-center text-black/40 text-[15px] font-medium leading-normal mb-[23px]">
+      <div className="flex items-center text-black hover:text-pur text-[15px] font-medium leading-normal mb-[23px]">
         <p className="mr-16">Категории спорта</p>
         <button className="" onClick={() => setOpenSearchBar(true)}>добавить</button>
       </div>

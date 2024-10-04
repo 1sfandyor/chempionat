@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { OpponentMatch, Rating, UserScore } from '@/components/tabs/UserInfo'
 import Reels from "../tabs/reels";
 import Players from "../tabs/players";
+import React from "react";
 
 
 export const TeamProfile = () => {

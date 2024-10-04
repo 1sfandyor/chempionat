@@ -12,9 +12,9 @@ export const UserCard: FC<UserCardType> = (props) => {
     <div className='flex items-center mb-[23px]'>
       <div className="flex items-center mr-10 cursor-pointer" onClick={() => router.push(`/profile/@${props.nickname}`)}>
         <Image className='rounded-full mr-[11px]' src='/avatar.png' alt="Avatar" width={40} height={40}/>
-        <div className='flex flex-col mr-auto'>
-          <p className='font-bold text-[15px] leading-normal'>@{props.nickname}</p>
-          <p className='font-normal text-[13px] text-black/70 leading-normal'>{props.name}</p>
+        <div className='flex flex-col mr-auto cursor-pointer'>
+          <p className='font-bold text-[15px] leading-normal hover:text-purple '>@{props.nickname}</p>
+          <p className='font-normal text-[13px] text-black'>{props.name}</p> 
         </div>
       </div>
       <div>
@@ -135,8 +135,8 @@ export const UserCard: FC<UserCardType> = (props) => {
       <Image className="cursor-pointer hover:opacity-80 acritve:opacity-60 w-10 h-10 mr-2.5" onClick={() => router.push(`memeber-profile/${props.name}`)} src={`${props.img}`} alt="" width={40} height={40}/>
       <div className="flex flex-col w-full text-black">
         <div className="flex w-full items-center justify-between">
-          <p className="text-[15px] font-semibold leading-normal cursor-pointer hover:opacity-80 acritve:opacity-60" onClick={() => router.push(`member-profile/@${props.name}`)}>{props.name}</p>
-          <p className="text-[13px] font-normal leading-normal text-nowrap pointer-events-none	">{props.postedAt}</p>
+          <p className="text-[15px] font-semibold leading-normal cursor-pointer hover:opacity-80 active:opacity-60 hover:text-purple" onClick={() => router.push(`member-profile/@${props.name}`)}>{props.name}</p>
+          <p className="text-[13px] font-normal leading-normal text-nowrap pointer-events-none">{props.postedAt}</p>
         </div>
         <p className="text-[13px] font-normal pointer-events-none	">{props.lastOnline}</p>
       </div>
@@ -152,7 +152,7 @@ export const UserCard: FC<UserCardType> = (props) => {
         </div>
         <div className="flex flex-col w-full text-black mr-[17px]">
           <div className="flex w-full items-center mb-[5px]">
-            <p className="text-[15px] font-semibold leading-normal mr-2.5">@{props.name}</p>
+            <p className="text-[15px] font-semibold leading-normal mr-2.5 hover:text-purple cursor-pointer">@{props.name}</p>
             <div className="flex items-center">
               <Image src={props.energy_icon as string} alt="" width={16} height={16}/>
               <p className="text-[13px] font-semibold leading-normal ">{props.energy}</p>
@@ -176,7 +176,7 @@ export const UserCard: FC<UserCardType> = (props) => {
 
         <div className="flex flex-col w-full text-black mr-[17px]">
           <div className="flex w-full items-center mb-[5px]">
-            <p className="text-[15px] font-semibold leading-normal mr-2.5">@{props.name}</p>
+            <p className="text-[15px] font-semibold leading-normal mr-2.5 cursor-pointer hover:text-purple">@{props.name}</p>
             <div className="flex items-center mr-0.5">
               <Image src={props.energy_icon as string} alt="" width={16} height={16}/>
               <p className="text-[13px] font-semibold leading-normal ">{props.energy}</p>
@@ -211,7 +211,7 @@ export const UserCard: FC<UserCardType> = (props) => {
 
         <div className="flex flex-col w-full text-black mr-[17px]">
           <div className="flex w-full items-center mb-[3px]">
-            <p className="text-[15px] font-semibold leading-normal mr-2.5 cursor-pointer" onClick={() => router.push(`team/${props.name}`)}>@{props.name}</p>
+            <p className="text-[15px] font-semibold leading-normal mr-2.5 cursor-pointer hover:text-purple" onClick={() => router.push(`team/${props.name}`)}>@{props.name}</p>
             <div className="flex items-center mr-0.5">
               <Image src={props.energy_icon as string} alt="" width={16} height={16}/>
               <p className="text-[13px] font-semibold leading-normal ">{props.energy}</p>
@@ -239,7 +239,7 @@ export const UserCard: FC<UserCardType> = (props) => {
 
         <div className="flex flex-col w-full text-black mr-[17px]">
           <div className="flex w-full items-center mb-[3px]">
-            <p className="text-[13px] font-semibold leading-normal mr-[49px]">@{props.name}</p>
+            <p className="text-[13px] font-semibold leading-normal mr-[49px] hover:text-purple cursor-pointer">@{props.name}</p>
             <button className="px-[11px] py-[4.5px] rounded-full text-[11px] font-medium">{props.sendRequest}</button>
           </div>
 
@@ -275,7 +275,7 @@ export const UserCard: FC<UserCardType> = (props) => {
           <div className="flex w-full items-center mb-[3px]">
             {/*  */}
             <div className="flex items-center">
-              <p className="text-[13px] font-medium leading-normal">@{props.name}</p>
+              <p className="text-[13px] font-medium leading-normal hover:text-purple cursor-pointer">@{props.name}</p>
               <div className="flex items-center">
                 <Image src={props.energy_icon as string} alt="" width={16} height={16}/>
                 <p className="text-[13px] font-medium leading-normal">{props.energy}</p>
@@ -375,7 +375,7 @@ export const UserCard: FC<UserCardType> = (props) => {
 
             {/* OPPONENT 1 INFO */}
             <div className="flex items-center">
-              <p className="text-[13px] font-medium leading-normal">@{props.name}</p>
+              <p className="text-[13px] font-medium leading-normal hover:text-purple cursor-pointer">@{props.name}</p>
               <div className="flex items-center">
                 <Image src={props.energy_icon as string} alt="" width={16} height={16}/>
                 <p className="text-[13px] font-medium leading-normal">{props.energy}</p>
@@ -386,7 +386,7 @@ export const UserCard: FC<UserCardType> = (props) => {
 
             {/* OPPONENT 2 INFO */}
             <div className="flex items-center">
-              <p className="text-[13px] font-medium leading-normal">@{props.opponent_name}</p>
+              <p className="text-[13px] font-medium leading-normal hover:text-purple cursor-pointer">@{props.opponent_name}</p>
               <div className="flex items-center">
                 <Image src={props.energy_icon as string} alt="" width={16} height={16}/>
                 <p className="text-[13px] font-medium leading-normal">{props.opponent_energy}</p>

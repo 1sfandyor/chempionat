@@ -19,7 +19,6 @@ const Players = () => {
                             age={item.age}/>
                 ))
             }
-            <p>salom</p>
         </section>
     );
 };

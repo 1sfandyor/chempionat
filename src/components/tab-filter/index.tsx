@@ -17,7 +17,7 @@ export type TableTabFilterProps = {
     nickname?: string;
 };
 
-export function TableTabFilter({ tabs, value, onTabChange, search, className, nickname }: TableTabFilterProps) {
+export function TableTabFilter({ tabs, onTabChange, search, className, nickname }: TableTabFilterProps) {
     const path = usePathname(); // Get the current pathname
     const searchParams = useSearchParams(); // Get the current search parameters
     const tabParam = searchParams.get('tab'); // Get the 'tab' parameter from the URL
@@ -36,7 +36,7 @@ export function TableTabFilter({ tabs, value, onTabChange, search, className, ni
                     
                     return (
                         <li key={index}
-                            className={`cursor-pointer hover:text-black font-medium leading-[17.9px] ${isSelected ? 'text-black' : 'text-black/40'}`}
+                            className={`cursor-pointer hover:text-purple font-medium leading-[17.9px] ${isSelected ? 'text-red' : 'text-black'}`}
                             onClick={() => onTabChange(tabValue)} >
                             <NavLink href={nickname ? `/profile/@${nickname}?tab=${tabValue}` : `?tab=${tabValue}`}>
                                 {title}
