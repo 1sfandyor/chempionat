@@ -78,7 +78,7 @@ const config: Config = {
   		}
   	},
   	container: {
-  		center: 'true',
+  		center: true,
   		padding: {
   			DEFAULT: '1rem',
   			xl: '1.5rem',
