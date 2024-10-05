@@ -1,11 +1,8 @@
-import { FC, useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import { FC } from 'react';
 import MapComponent from '../GoogleMap/GoogleMap';
 import CompetitionForm from '../createCompetition/CompetitionForm';
-import { RegisterModalType } from '@/interfaces/registerModal.interface';
 
 interface CreateMeetingProps {
-  modalItem: RegisterModalType;
   setOpenCreateMeet: React.Dispatch<React.SetStateAction<boolean>>;
 }
 

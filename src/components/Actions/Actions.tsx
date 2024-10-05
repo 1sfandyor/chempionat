@@ -39,15 +39,6 @@ export const Actions = () => {
 
 
 
-  const modalItem = {
-    text: email === null
-      ? "🧔👩 Спасибо что выбрал здоровый образ жизни!"
-      : pin === null
-        ? '📮Мы отправили смс с кодом для активации аккаунта'
-        : 'Придумайте для себя никнейм )',
-    children: '',
-    setOpenRegisterModal: () => setOpenRegisterModal(false)
-  };
 
   return (
     <>
@@ -106,7 +97,7 @@ export const Actions = () => {
         openCreateMeet && (
           <>
             <div className="fixed top-0 left-0 w-full h-full  z-50" onClick={() => setOpenCreateMeet(false)}></div>
-            <CreateMeeting modalItem={modalItem} setOpenCreateMeet={setOpenCreateMeet}/>
+            <CreateMeeting setOpenCreateMeet={setOpenCreateMeet}/>
           </> 
         )
       }
