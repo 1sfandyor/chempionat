@@ -10,26 +10,12 @@ interface CreateMeetingProps {
 }
 
 const CreateMeeting: FC<CreateMeetingProps> = ({ setOpenCreateMeet }) => {
-  const [container, setContainer] = useState<HTMLElement | null>(null);
 
-  useEffect(() => {
-    // Check if the target container exists
-    const mainElement = document.querySelector('main');
-    if (mainElement) {
-      setContainer(mainElement);
-    } else {
-      console.error('Target container not found');
-    }
-  }, []);
-
-  if (!container) return null;
-
-  return ReactDOM.createPortal(
+  return (
     <div className="z-[99999] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
       <div className="relative flex flex-col items-start bg-white w-[539px] h-[453px] p-[5px] pt-10 pb-[7px] rounded-xl shadow-[0px_44px_85px_0px_rgba(72,66,60,0.12)]">
         <div className="flex items-start justify-between w-full px-[38px]">
           <p className="text-black text-2xl font-normal w-[264px] mb-5">🤝Найти игрока</p>
-
           <label className="inline-flex items-center mb-5 cursor-pointer">
             <span className="text-[13px] font-normal text-black mr-[5px]">В настоящее время</span>
             <input type="checkbox" value="" className="sr-only peer" />
@@ -46,9 +32,8 @@ const CreateMeeting: FC<CreateMeetingProps> = ({ setOpenCreateMeet }) => {
           <button className="flex text-[15px] py-3 px-[30px] rounded-[11px] font-medium bg-[#F0F0F0]" onClick={() => setOpenCreateMeet(false)}>Отметить</button>
         </div>
       </div>
-    </div>,
-    container
-  );
+    </div>
+  )
 };
 
 export default CreateMeeting;

@@ -1,5 +1,9 @@
 export const tab_items = [
   {
+    title: 'Лента',
+    value: 'reels',
+  },
+  {
     title: 'Игроки',
     value: 'players',
   },
@@ -18,9 +22,5 @@ export const tab_items = [
   {
     title: 'Площадки',
     value: 'venues',
-  },
-  {
-    title: 'Лента',
-    value: 'reels',
   },
 ];

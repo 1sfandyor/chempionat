@@ -5,7 +5,10 @@ interface InputFieldProps {
   name: string;
   type: string;
   required?: boolean;
+  value?: string;
 }
+
+
 
 interface FormComponentProps {
   fields: InputFieldProps[];
@@ -14,8 +17,7 @@ interface FormComponentProps {
 
 const FormComponent: React.FC<FormComponentProps> = ({ fields, onSubmit }) => {
   const [formData, setFormData] = useState<Record<string, string>>(
-    fields.reduce((acc, field) => {
-      acc[field.name] = '';
+    fields.reduce(acc => {
       return acc;
     }, {} as Record<string, string>)
   );
@@ -42,6 +44,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ fields, onSubmit }) => {
             value={formData[field.name]}
             onChange={handleChange}
             required={field.required}
+            defaultValue={field.value as string}
           />
         </div>
       ))}

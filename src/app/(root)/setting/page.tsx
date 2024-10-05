@@ -5,12 +5,14 @@ import Form from "@/components/Form/Form";
 import ProfileUploader from "@/components/ImageUpload/ImageUpload";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 
 const Setting = () => {
 
   const [nickName, setNickName] = useState<string | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     setNickName(localStorage.getItem('nickname'))
@@ -21,10 +23,10 @@ const Setting = () => {
   };
 
   const fields = [
-    { label: 'Фамилия', name: 'name', type: 'text', required: true },
-    { label: 'Имя', name: 'surname', type: 'text', required: true },
-    { label: 'Отчество', name: 'familyName', type: 'text', required: true },
-    { label: 'E-mail', name: 'email', type: 'email', required: true },
+    {value: 'Janizakov', label: 'Фамилия', name: 'name', type: 'text', required: true },
+    {value: 'Abbos', label: 'Имя', name: 'surname', type: 'text', required: true },
+    {value: '', label: 'Отчество', name: 'familyName', type: 'text', required: true },
+    {value: 'abbosjanizakov@gmail.com', label: 'E-mail', name: 'email', type: 'email', required: true },
   ];
 
   return (
@@ -33,7 +35,7 @@ const Setting = () => {
         <div className='pt-[19px] w-[548px] px-6 border-x-[1px] overflow-hidden border-x-border'>
 
           {/* UPLOAD IMAGE */}
-          <div className="flex items-center text-[15px] text-black font-medium mb-6">
+          <div className="flex items-center text-[15px] text-black font-medium mb-6 cursor-pointer" onClick={() => router.back()}>
             <FontAwesomeIcon icon={faAngleLeft} width={20} height={20} />
             <p>Настройка профилья</p>
           </div>

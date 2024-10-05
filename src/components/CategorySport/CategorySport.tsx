@@ -1,21 +1,20 @@
 'use client'
 import Image from "next/image"
-import { useState } from "react"
+import { FC, useState } from "react"
 import SearchBar from "../Search/Search";
 
 interface CategorySportProps {
   setOpenCreateMeet: (open: boolean) => void;
-  setOpenSearchBar: (open: boolean) => void;
+  setOpenSearchBar: (open: boolean) => void
 }
 
 
-export const CategorySport: React.FC<CategorySportProps> = ({ setOpenCreateMeet, setOpenSearchBar }) => {
-
+export const CategorySport: FC<CategorySportProps> = ({ setOpenCreateMeet, setOpenSearchBar }) => {
   return (
     <div className="flex flex-col items-start grow">
-      <div className="flex items-center text-black hover:text-pur text-[15px] font-medium leading-normal mb-[23px]">
-        <p className="mr-16">Категории спорта</p>
-        <button className="" onClick={() => setOpenSearchBar(true)}>добавить</button>
+      <div className="flex items-center text-black/40 text-[15px] font-medium leading-normal mb-[23px]">
+        <p className="mr-16 text-black">Категории спорта</p>
+        <button className="text-black hover:text-purple active:opacity-60" onClick={() => setOpenSearchBar(true)}>добавить</button>
       </div>
 
       <div className="flex items-start flex-col">
